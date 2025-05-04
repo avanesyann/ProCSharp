@@ -1,4 +1,4 @@
-# :blue_book: A collection of C# projects and exercises built while working through Pro C# by Andrew Troelsen. 
+## :blue_book: A collection of C# projects and exercises built while working through Pro C# by Andrew Troelsen. 
 
 This repository contains my personal learning journey through the book. 
 
