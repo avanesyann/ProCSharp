@@ -28,6 +28,7 @@
 
             Console.WriteLine("\nProcess Path: {0}", Environment.ProcessPath);
             Console.WriteLine("\nMinutes since the machine's start: {0}", Environment.TickCount64/1000/60);
+            Console.WriteLine("\nWorking set: {0}", Environment.WorkingSet);
         }
     }
 }
