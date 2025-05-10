@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentClass", "Environ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencyCounter", "FrequencyCounter\FrequencyCounter.csproj", "{9BCD03C4-B131-4167-980E-1CC9010EB6C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatching", "PatternMatching\PatternMatching.csproj", "{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9BCD03C4-B131-4167-980E-1CC9010EB6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BCD03C4-B131-4167-980E-1CC9010EB6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BCD03C4-B131-4167-980E-1CC9010EB6C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
