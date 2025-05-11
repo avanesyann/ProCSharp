@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencyCounter", "Frequen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatching", "PatternMatching\PatternMatching.csproj", "{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingArrays", "UnderstandingArrays\UnderstandingArrays.csproj", "{38EC8305-31CE-4065-8F01-4A9958B74180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17D814DA-6CA9-4FDB-A9FC-7321C52D7550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38EC8305-31CE-4065-8F01-4A9958B74180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EC8305-31CE-4065-8F01-4A9958B74180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EC8305-31CE-4065-8F01-4A9958B74180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EC8305-31CE-4065-8F01-4A9958B74180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
