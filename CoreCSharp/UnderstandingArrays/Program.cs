@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             DeclareImplicitArrays();
+            JaggedArray();
         }
 
         static void DeclareImplicitArrays()
@@ -23,6 +24,28 @@
             var d = new[] { 882L, 134, 911 };
             Console.WriteLine("d is a: {0}", d.ToString());
 
+            Console.WriteLine();
+        }
+
+        static void JaggedArray()
+        {
+            Console.WriteLine("=> Jagged multidimensional array.");
+
+            int[][] jagArr = new int[5][];
+
+            for (int i = 0; i < jagArr.Length; i++)
+            {
+                jagArr[i] = new int[i + 7];
+            }
+
+            for (int i = 0; i < jagArr.Length; i++)
+            {
+                for (int j = 0; j < jagArr[i].Length; j++)
+                {
+                    Console.Write(jagArr[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
             Console.WriteLine();
         }
     }
