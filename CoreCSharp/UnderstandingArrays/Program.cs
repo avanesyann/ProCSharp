@@ -6,6 +6,7 @@
         {
             DeclareImplicitArrays();
             JaggedArray();
+            IndicesAndRanges();
         }
 
         static void DeclareImplicitArrays()
@@ -47,6 +48,25 @@
                 Console.WriteLine();
             }
             Console.WriteLine();
+        }
+
+        static void IndicesAndRanges()
+        {
+            Console.WriteLine("=> Indices and Ranges.");
+
+            int[] ranks = new int[] { 14, 16, 18, 20, 22, 24 };
+
+            for (int i = 0; i < ranks.Length; i++)
+            {
+                Index idx = i;
+                Console.WriteLine(ranks[idx]);
+            }
+            Console.WriteLine();
+            for (int i = 1; i <= ranks.Length; i++)
+            {
+                Index idx = ^i;
+                Console.WriteLine(ranks[idx]);
+            }
         }
     }
 }
