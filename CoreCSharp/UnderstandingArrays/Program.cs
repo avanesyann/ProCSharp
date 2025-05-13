@@ -67,6 +67,27 @@
                 Index idx = ^i;
                 Console.WriteLine(ranks[idx]);
             }
+            Console.WriteLine();
+
+            foreach (var itm in ranks[0..2])
+            {
+                Console.Write(itm + " ");
+            }
+            Console.WriteLine();
+
+            Index idx1 = 0;
+            Index idx2 = 2;
+            Range r = idx1..idx2;
+            foreach (var itm in ranks[r])
+            {
+                Console.Write(itm + " ");
+            }
+            Console.WriteLine();
+
+            var rnk1 = ranks.ElementAt(^2);
+            var rnk2 = ranks[^2];
+            Console.WriteLine(rnk1);
+            Console.WriteLine(rnk2);
         }
     }
 }
