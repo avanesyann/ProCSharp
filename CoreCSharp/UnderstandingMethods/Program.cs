@@ -21,6 +21,8 @@
             SwapInts(ref i1, ref i2);
             Console.WriteLine($"{s1} {s2}");
             Console.WriteLine($"{i1} {i2}");
+
+            Console.WriteLine(AddReadOnly(i1, i2));
         }
 
         static int AddWrapper(int x, int y)
@@ -48,6 +50,12 @@
             int temp = x;
             x = y;
             y = temp;
+        }
+        static int AddReadOnly(in int x, in int y)
+        {
+            int ans = x + y;
+
+            return ans;
         }
     }
 }
