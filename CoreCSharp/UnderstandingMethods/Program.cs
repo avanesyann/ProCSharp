@@ -23,6 +23,11 @@
             Console.WriteLine($"{i1} {i2}");
 
             Console.WriteLine(AddReadOnly(i1, i2));
+            Console.WriteLine(AddReadOnly(i1));
+
+            double[] doubles = new double[] { 3.14, 3.33, 3.99 };
+            Console.WriteLine(CalculateAverage(1.4, 1.6, 1.8));
+            Console.WriteLine(CalculateAverage(doubles));
         }
 
         static int AddWrapper(int x, int y)
@@ -31,7 +36,7 @@
 
             int Add() => x + y;
         }
-        
+
         static int AddUsingOut(int x, int y, out int ans)
         {
             ans = x + y;
@@ -51,11 +56,27 @@
             x = y;
             y = temp;
         }
-        static int AddReadOnly(in int x, in int y)
+        static int AddReadOnly(in int x, in int y = 10)
         {
             int ans = x + y;
 
             return ans;
+        }
+        static double CalculateAverage(params double[] values)
+        {
+            Console.WriteLine("You sent me {0} doubles.", values.Length);
+
+            double sum = 0;
+            if (values.Length == 0)
+            {
+                return sum;
+            }
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                sum += values[i];
+            }
+            return sum / values.Length;
         }
     }
 }
