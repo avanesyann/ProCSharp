@@ -28,6 +28,10 @@
             double[] doubles = new double[] { 3.14, 3.33, 3.99 };
             Console.WriteLine(CalculateAverage(1.4, 1.6, 1.8));
             Console.WriteLine(CalculateAverage(doubles));
+            Console.WriteLine();
+
+            DisplayFancyMessage(message: "This is a fancy text.", textColor: ConsoleColor.DarkRed, backgroundColor: ConsoleColor.White);
+            DisplayFancyMessage(ConsoleColor.DarkMagenta, message: "This is another fancy text.", backgroundColor: ConsoleColor.White);
         }
 
         static int AddWrapper(int x, int y)
@@ -77,6 +81,18 @@
                 sum += values[i];
             }
             return sum / values.Length;
+        }
+        static void DisplayFancyMessage(ConsoleColor textColor, ConsoleColor backgroundColor, string message)
+        {
+            ConsoleColor oldTextColor = Console.ForegroundColor;
+            ConsoleColor oldBackgroundColor = Console.BackgroundColor;
+
+            Console.ForegroundColor = textColor;
+            Console.BackgroundColor = backgroundColor;
+            Console.WriteLine(message);
+
+            Console.ForegroundColor = oldTextColor;
+            Console.BackgroundColor = oldBackgroundColor;
         }
     }
 }
