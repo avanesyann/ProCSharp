@@ -32,6 +32,8 @@
 
             DisplayFancyMessage(message: "This is a fancy text.", textColor: ConsoleColor.DarkRed, backgroundColor: ConsoleColor.White);
             DisplayFancyMessage(ConsoleColor.DarkMagenta, message: "This is another fancy text.", backgroundColor: ConsoleColor.White);
+
+            EnterLogData("Hi there!");
         }
 
         static int AddWrapper(int x, int y)
@@ -93,6 +95,19 @@
 
             Console.ForegroundColor = oldTextColor;
             Console.BackgroundColor = oldBackgroundColor;
+        }
+
+        static void EnterLogData(string message, string owner = "Programmer")
+        {
+            //if (message == null)
+            //{
+            //    throw new ArgumentNullException(message);
+            //}
+
+            ArgumentNullException.ThrowIfNull(message);
+
+            Console.WriteLine("Error: {0}", message);
+            Console.WriteLine("Owner of Error: {0}", owner);
         }
     }
 }
