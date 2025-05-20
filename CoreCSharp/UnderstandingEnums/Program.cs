@@ -7,8 +7,12 @@
             Console.WriteLine(EmpType.Manager);
             Console.WriteLine((int)EmpType.Contractor);
             Console.WriteLine();
-            AskForBonus(EmpType.Manager);
-            AskForBonus(EmpType.VicePresident);
+
+            EmpType emp = EmpType.VicePresident;
+            AskForBonus(emp);
+            AskForBonus(EmpType.Contractor);
+            Console.WriteLine(Enum.GetUnderlyingType(emp.GetType()));
+            Console.WriteLine(Enum.GetUnderlyingType(typeof(EmpType)));
         }
 
 
