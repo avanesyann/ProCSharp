@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingMethods", "Und
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingEnums", "UnderstandingEnums\UnderstandingEnums.csproj", "{F4F92CC7-56DD-4485-9D2D-79D067BB9773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingStructs", "UnderstandingStructs\UnderstandingStructs.csproj", "{B69F32FA-F54B-4652-BB04-9AFA277C7B6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F4F92CC7-56DD-4485-9D2D-79D067BB9773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4F92CC7-56DD-4485-9D2D-79D067BB9773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4F92CC7-56DD-4485-9D2D-79D067BB9773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69F32FA-F54B-4652-BB04-9AFA277C7B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69F32FA-F54B-4652-BB04-9AFA277C7B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69F32FA-F54B-4652-BB04-9AFA277C7B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69F32FA-F54B-4652-BB04-9AFA277C7B6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
