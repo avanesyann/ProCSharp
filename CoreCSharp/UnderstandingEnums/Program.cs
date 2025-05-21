@@ -13,6 +13,26 @@
             AskForBonus(EmpType.Contractor);
             Console.WriteLine(Enum.GetUnderlyingType(emp.GetType()));
             Console.WriteLine(Enum.GetUnderlyingType(typeof(EmpType)));
+            Console.WriteLine();
+
+            EmpType emp2 = EmpType.Contractor;
+            DayOfWeek day = DayOfWeek.Monday;
+            ConsoleColor cc = ConsoleColor.Gray;
+
+            EvaluateEnum(emp2);
+            EvaluateEnum(day);
+            EvaluateEnum(cc);
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            ContactPreference emailAndPhone = ContactPreference.Email | ContactPreference.Phone;
+
+            Console.WriteLine("None? {0}", (emailAndPhone | ContactPreference.None) == emailAndPhone);
+            Console.WriteLine("Email? {0}", (emailAndPhone | ContactPreference.Email) == emailAndPhone);
+            Console.WriteLine("Phone? {0}", (emailAndPhone | ContactPreference.Phone) == emailAndPhone);
+            Console.WriteLine("Text? {0}", (emailAndPhone | ContactPreference.Ponyexpress) == emailAndPhone);
+
         }
 
 
@@ -34,12 +54,35 @@
                     break;
             }
         }
+        static void EvaluateEnum(Enum e)
+        {
+            Console.WriteLine("=> Information about {0}", e.GetType().Name);
+
+            Console.WriteLine("Underlying storage type: {0}", Enum.GetUnderlyingType(e.GetType()));
+
+            Array enumData = Enum.GetValues(e.GetType());
+            Console.WriteLine("This enum has {0} members.", enumData.Length);
+
+            for (int i = 0; i < enumData.Length; i++)
+            {
+                Console.WriteLine("Name: {0}, Value: {0:D}", enumData.GetValue(i));
+            }
+        }
         enum EmpType : byte
         {
             Manager = 101,
             Grunt, 
             Contractor, 
             VicePresident
+        }
+
+        [Flags]
+        enum ContactPreference
+        {
+            None = 1, 
+            Email = 2,
+            Phone = 4,
+            Ponyexpress = 6
         }
     }
 }
