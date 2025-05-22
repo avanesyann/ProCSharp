@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Point myPoint;
+            Point myPoint;      // = new Point(); assigns default values (e.g. 0)
             myPoint.X = 349;
             myPoint.Y = 76;
             myPoint.Display();
