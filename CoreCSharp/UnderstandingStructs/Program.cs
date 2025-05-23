@@ -54,4 +54,21 @@
             Console.WriteLine("X = {0}, Y = {1}", X, Y);
         }
     }
+
+    readonly struct ReadOnlyPoint
+    {
+        public int X { get; }
+        public int Y { get; }
+
+        public void Display()
+        {
+            Console.WriteLine($"X = {X}, Y = {Y}");
+        }
+
+        public ReadOnlyPoint(int xPos, int yPos)
+        {
+            X = xPos;
+            Y = yPos;
+        }
+    }
 }
