@@ -11,6 +11,16 @@
 
             myPoint.Increment();
             myPoint.Display();
+
+            Console.WriteLine();
+
+            Point secondPoint = new Point(50, 50);
+            secondPoint.Display();
+
+            Console.WriteLine();
+
+            Point thirdPoint = new Point();
+            thirdPoint.Display();
         }
 
 
@@ -19,6 +29,17 @@
     {
         public int X;
         public int Y;
+
+        public Point()
+        {
+            X = 1;
+            Y = 1;
+        }
+        public Point(int xPos, int yPos)
+        {
+            X = xPos;
+            Y = yPos;
+        }
 
         public void Increment()
         {
