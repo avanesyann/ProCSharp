@@ -21,6 +21,12 @@
 
             Point thirdPoint = new Point();
             thirdPoint.Display();
+
+            Console.WriteLine();
+
+            var s = new DisposableRefStruct(50, 60);
+            s.Display();
+            s.Dispose();
         }
 
 
@@ -69,6 +75,26 @@
         {
             X = xPos;
             Y = yPos;
+        }
+    }
+
+    ref struct DisposableRefStruct
+    {
+        public int X;
+        public readonly int Y;
+        public readonly void Display()
+        {
+            Console.WriteLine($"X = {X}, Y = {Y}");
+        }
+        public DisposableRefStruct(int xPos, int yPos)
+        {
+            X = xPos;
+            Y = yPos;
+            Console.WriteLine("Created!");
+        }
+        public void Dispose()
+        {
+            Console.WriteLine("Disposed!");
         }
     }
 }
