@@ -34,6 +34,16 @@
             DisplayFancyMessage(ConsoleColor.DarkMagenta, message: "This is another fancy text.", backgroundColor: ConsoleColor.White);
 
             EnterLogData("Hi there!");
+
+            Console.WriteLine();
+            Console.WriteLine("Enter the temperature: ");
+            string input = Console.ReadLine();
+
+            if (TryParseTemperature(input, out int temp))
+                Console.WriteLine($"Parsing succeeded: {temp}");
+            else
+                Console.WriteLine($"Parsing failed. Default value: {temp}");
+
         }
 
         static int AddWrapper(int x, int y)
@@ -108,6 +118,15 @@
 
             Console.WriteLine("Error: {0}", message);
             Console.WriteLine("Owner of Error: {0}", owner);
+        }
+
+        static bool TryParseTemperature(string input, out int temperature)
+        {
+            if (int.TryParse(input, out temperature))
+                return true;
+
+            temperature = 0;
+            return false;
         }
     }
 }
