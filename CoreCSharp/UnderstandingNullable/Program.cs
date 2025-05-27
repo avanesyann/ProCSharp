@@ -25,6 +25,12 @@
                 Console.WriteLine("Value of 'b' is: {0}", b.Value);
             else
                 Console.WriteLine("Value of 'b' is undefined.");
+
+
+            string? nullableString = null;
+            TestClass? myNullableClass = null;
+#nullable disable
+            TestClass anotherNullableClass = null;
         }
 
     }
@@ -35,5 +41,10 @@
 
         public int? GetIntFromDatabase() => numericValue;
         public bool? GetBoolFromDatabase() => boolValue;
+    }
+    internal class TestClass
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
     }
 }
