@@ -1,4 +1,6 @@
-﻿namespace UnderstandingNullable
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace UnderstandingNullable
 {
     internal class Program
     {
@@ -31,8 +33,29 @@
             TestClass? myNullableClass = null;
 #nullable disable
             TestClass anotherNullableClass = null;
-        }
+#nullable enable
 
+            Console.WriteLine();
+
+            // Null-Coalescing Operator
+
+            DatabaseReader dr2 = new DatabaseReader();
+            int myData = dr.GetIntFromDatabase() ?? 100;
+            Console.WriteLine("Value of myData: {0}", myData);
+
+            int? nullableInt2 = null;
+            nullableInt2 ??= 12;
+            nullableInt2 ??= 14;
+            Console.WriteLine(nullableInt2);
+            Console.WriteLine();
+
+            // Null Conditional Operator
+
+            string[] strs = new string[] { "hi", "there" };
+            string[] strs2 = null;
+            Console.WriteLine($"You sent me {strs?.Length} elements.");
+            Console.WriteLine($"You sent me {strs2?.Length ?? 0} elements.");
+        }
     }
     internal class DatabaseReader
     {
