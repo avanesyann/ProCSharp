@@ -35,7 +35,31 @@
             (int, (int, int)) nt = (5, (1, 2));
 
             Console.WriteLine($"Contents of nt: {nt.Item1}, {nt.Item2} = {nt.Item2.Item1}, {nt.Item2.Item2}");
+
+            Console.WriteLine();
+
+            var tsv = FillTheseValues();
+            Console.WriteLine(tsv.Number);
+            Console.WriteLine(tsv.Horsie);
+            Console.WriteLine(tsv.IsStrong);
+
+            Console.WriteLine();
+
+            var name = SplitNames("Arthur Burton Morgan");
+            Console.WriteLine(name.FirstName);
+            Console.WriteLine(name.MiddleName);
+            Console.WriteLine(name.LastName);
         }
 
+        static (int Number, string Horsie, bool IsStrong) FillTheseValues()
+        {
+            return (9, "white horsie", true);
+        }
+        static (string FirstName, string MiddleName, string LastName) SplitNames(string fullName)
+        {
+            string[] name = fullName.Split(" ");
+
+            return (name[0], name[1], name[2]);
+        }
     }
 }
