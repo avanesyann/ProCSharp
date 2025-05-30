@@ -49,6 +49,10 @@
             Console.WriteLine(name.FirstName);
             Console.WriteLine(name.MiddleName);
             Console.WriteLine(name.LastName);
+
+            Console.WriteLine();
+
+            Console.WriteLine(RockPaperScissors("rock", "scissors"));
         }
 
         static (int Number, string Horsie, bool IsStrong) FillTheseValues()
@@ -60,6 +64,20 @@
             string[] name = fullName.Split(" ");
 
             return (name[0], name[1], name[2]);
+        }
+
+        static string RockPaperScissors(string first, string second)
+        {
+            return (first, second) switch
+            {
+                ("rock", "paper") => "Paper wins.",
+                ("rock", "scissors") => "Rock wins.",
+                ("paper", "rock") => "Paper wins.",
+                ("paper", "scissors") => "Scissors wins.",
+                ("scissors", "rock") => "Rock wins.",
+                ("scissors", "paper") => "Scissors wins.",
+                (_, _) => "Tie."
+            };
         }
     }
 }
