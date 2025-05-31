@@ -53,6 +53,16 @@
             Console.WriteLine();
 
             Console.WriteLine(RockPaperScissors("rock", "scissors"));
+
+            Console.WriteLine();
+
+            Point p = new Point(6, 8);
+            var pointValues = p.Deconstruct();
+
+            Console.WriteLine($"X is {pointValues.XPos}");
+            Console.WriteLine($"Y is {pointValues.YPos}");
+
+            Console.WriteLine(GetQuadrant(p));
         }
 
         static (int Number, string Horsie, bool IsStrong) FillTheseValues()
@@ -79,5 +89,32 @@
                 (_, _) => "Tie."
             };
         }
+
+        static string GetQuadrant(Point p)
+        {
+            return p.Deconstruct() switch
+            {
+                (0, 0) => "Origin",
+                var (x, y) when x > 0 && y > 0 => "One",
+                var (x, y) when x < 0 && y > 0 => "Two",
+                var (x, y) when x < 0 && y < 0 => "Three",
+                var (x, y) when x > 0 && y < 0 => "Four",
+                var (_, _) => "Border"
+            };
+        }
+    }
+
+    struct Point
+    {
+        public int X;
+        public int Y;
+
+        public Point(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public (int XPos, int YPos) Deconstruct() => (X, Y);
     }
 }
