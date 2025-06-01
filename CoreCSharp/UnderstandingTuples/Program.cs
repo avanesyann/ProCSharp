@@ -63,6 +63,11 @@
             Console.WriteLine($"Y is {pointValues.YPos}");
 
             Console.WriteLine(GetQuadrant(p));
+
+            Console.WriteLine();
+
+            var student = GetStudentInfo("Alice Johnson", 70, 40, 80);
+            Console.WriteLine($"Name: {student.Name}, Average: {student.Average:F2}, Status: {student.Status}");
         }
 
         static (int Number, string Horsie, bool IsStrong) FillTheseValues()
@@ -101,6 +106,14 @@
                 var (x, y) when x > 0 && y < 0 => "Four",
                 var (_, _) => "Border"
             };
+        }
+
+        static (string Name, double Average, string Status) GetStudentInfo(string name, int score1, int score2, int score3)
+        {
+            double average = (score1 + score2 + score3) / 3.0;
+            string status = average >= 60 ? "Passed" : "Failed";
+
+            return (name, average, status);
         }
     }
 
