@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingNullable", "Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderstandingTuples", "UnderstandingTuples\UnderstandingTuples.csproj", "{9A43407D-4BD4-478A-83EC-E5DD1601CE9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement", "StudentManagement\StudentManagement.csproj", "{300BFAA4-61D3-456E-BA09-BD31FF23ABEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{9A43407D-4BD4-478A-83EC-E5DD1601CE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A43407D-4BD4-478A-83EC-E5DD1601CE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A43407D-4BD4-478A-83EC-E5DD1601CE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300BFAA4-61D3-456E-BA09-BD31FF23ABEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300BFAA4-61D3-456E-BA09-BD31FF23ABEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300BFAA4-61D3-456E-BA09-BD31FF23ABEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300BFAA4-61D3-456E-BA09-BD31FF23ABEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
