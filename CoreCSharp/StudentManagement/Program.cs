@@ -4,15 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Student alice = new Student("Alice", 29, null, ContactPreference.Text, 80, 90, 70);
-            var aliceStatus = alice.Average();
+            List<Student> students = new List<Student>();
+            students.Add(new Student("Alice", 29, null, ContactPreference.Text, 80, 90, 70));
+            students.Add(new Student("John", 24, null, ContactPreference.Phone, 60, 70, 60));
+            students.Add(new Student("Mark", 32, null, ContactPreference.Phone, 90, 90, 100));
 
-            Console.WriteLine($"{alice.Name}'s average grade is {aliceStatus.Average:F2}. She {aliceStatus.Status}!");
-
-            Student john = new Student("John", 24, null, ContactPreference.Phone, 60, 70, 60);
-            var johnStatus = john.Average();
-
-            Console.WriteLine($"{john.Name}'s average grade is {johnStatus.Average:F2}. He {johnStatus.Status}!");
+            foreach (var student in students)
+            {
+                var (avg, status) = student.Average();
+                Console.WriteLine($"{student.Name}'s average grade is {avg:F2}. They {status}!");
+            }
         }
     }
 
