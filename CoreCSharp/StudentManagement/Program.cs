@@ -6,14 +6,36 @@
         {
             List<Student> students = new List<Student>();
             students.Add(new Student("Alice", 29, null, ContactPreference.Text, 80, 90, 70));
+            students.Add(new Student("Rick", 17, null, ContactPreference.Text, 60, 90, 70));
             students.Add(new Student("John", 24, null, ContactPreference.Phone, 60, 70, 60));
             students.Add(new Student("Mark", 32, null, ContactPreference.Phone, 90, 90, 100));
+            students.Add(new Student("Roland", 72, null, ContactPreference.Phone, 80, 76, 84));
 
             foreach (var student in students)
             {
+                string label = student.Age switch
+                {
+                    < 18 => "Minor",
+                    >= 65 => "Senior",
+                    _ => "Adult"
+                };
                 var (avg, status) = student.Average();
-                Console.WriteLine($"{student.Name}'s average grade is {avg:F2}. They {status}!");
+                Console.WriteLine($"{student.Name}'s({label}) average grade is {avg:F2}. They {status}!");
             }
+        }
+
+        static bool TryReadGrade(string prompt, out int grade)
+        {
+            Console.WriteLine(prompt);
+            string? input = Console.ReadLine();
+
+            if (int.TryParse(input, out grade) && grade >= 0 && grade <= 100)
+            {
+                return true;
+            }
+
+            grade = 0;
+            return false;
         }
     }
 
