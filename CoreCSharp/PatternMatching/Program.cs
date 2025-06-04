@@ -31,6 +31,20 @@ namespace PatternMatching
             Console.WriteLine(RockPaperScissors("rock", "paper"));
             Console.WriteLine(RockPaperScissors("rock", "scissors"));
 
+            Console.WriteLine();
+
+            var items = new List<object>
+            {
+                42,
+                17,
+                "Hi",
+                "This is a long string",
+                3.14159,
+                null,
+                true
+            };
+            ProcessItems(items);
+
         }
 
         static void IfElsePatternMatching(object item)
@@ -105,6 +119,37 @@ namespace PatternMatching
                 ("scissors", "paper") => "Scissors wins.",
                 (_, _) => "Tie.",
             };
+        }
+
+        static void ProcessItems(List<object?> items)
+        {
+            foreach (var item in items)
+            {
+                switch (item)
+                {
+                    case int i when i % 2 == 0:
+                        Console.WriteLine($"Even number: {i}");
+                        break;
+                    case int i when i % 2 != 0:
+                        Console.WriteLine($"Odd number: {i}");
+                        break;
+                    case string s when s.Length > 5:
+                        Console.WriteLine($"Long string: {s}");
+                        break;
+                    case string s when s.Length < 5:
+                        Console.WriteLine($"Short string: {s}");
+                        break;
+                    case double d:
+                        Console.WriteLine($"Double: {d}");
+                        break;
+                    case null:
+                        Console.WriteLine("Null value");
+                        break;
+                    default:
+                        Console.WriteLine("Unknown type");
+                        break;
+                }
+            }
         }
     }
 }
