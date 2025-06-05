@@ -1,4 +1,6 @@
-﻿namespace UnderstandingTuples
+﻿using System.Runtime.CompilerServices;
+
+namespace UnderstandingTuples
 {
     internal class Program
     {
@@ -114,6 +116,30 @@
             string status = average >= 60 ? "Passed" : "Failed";
 
             return (name, average, status);
+        }
+
+        static (int WordCount, string LongestWord, double AverageLength) AnalyzeSentence(string sentence)
+        {
+            string[] words = sentence.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            if (words.Length == 0)
+                return (0, string.Empty, 0.0);
+
+            string longest = words[0];
+            int wordSum = 0;
+
+            foreach (string word in words)
+            {
+                wordSum += word.Length;
+                if (word.Length > longest.Length)
+                {
+                    longest = word;
+                }
+            }
+
+            double average = (double)wordSum / words.Length;
+
+            return (words.Length, longest, average);
         }
     }
 
