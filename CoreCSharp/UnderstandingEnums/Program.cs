@@ -33,6 +33,13 @@
             Console.WriteLine("Phone? {0}", (emailAndPhone | ContactPreference.Phone) == emailAndPhone);
             Console.WriteLine("Text? {0}", (emailAndPhone | ContactPreference.Ponyexpress) == emailAndPhone);
 
+            Console.WriteLine();
+            Console.WriteLine();
+
+            var prefs = NotificationOptions.Email | NotificationOptions.Push;
+
+            Console.WriteLine(prefs);
+            Console.WriteLine(prefs & NotificationOptions.Email);
         }
 
 
@@ -68,6 +75,7 @@
                 Console.WriteLine("Name: {0}, Value: {0:D}", enumData.GetValue(i));
             }
         }
+
         enum EmpType : byte
         {
             Manager = 101,
@@ -83,6 +91,16 @@
             Email = 2,
             Phone = 4,
             Ponyexpress = 6
+        }
+
+        [Flags]
+        enum NotificationOptions
+        {
+            None = 0,
+            Email = 1,
+            SMS = 2,
+            Push = 4,
+            InApp = 8,
         }
     }
 }
