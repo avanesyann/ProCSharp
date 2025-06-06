@@ -70,6 +70,11 @@ namespace UnderstandingTuples
 
             var student = GetStudentInfo("Alice Johnson", 70, 40, 80);
             Console.WriteLine($"Name: {student.Name}, Average: {student.Average:F2}, Status: {student.Status}");
+
+            Console.WriteLine();
+
+            var analyzedSentence = AnalyzeSentence("This.. is a sentence, containing punctuation!");
+            Console.WriteLine($"Word Count: {analyzedSentence.WordCount} | Longest word: {analyzedSentence.LongestWord} | Average length: {analyzedSentence.AverageLength}");
         }
 
         static (int Number, string Horsie, bool IsStrong) FillTheseValues()
@@ -120,11 +125,12 @@ namespace UnderstandingTuples
 
         static (int WordCount, string LongestWord, double AverageLength) AnalyzeSentence(string sentence)
         {
-            string[] words = sentence.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string cleaned = new string(sentence.Where(c => !char.IsPunctuation(c)).ToArray());
+            string[] words = cleaned.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
             if (words.Length == 0)
                 return (0, string.Empty, 0.0);
-
+            
             string longest = words[0];
             int wordSum = 0;
 
