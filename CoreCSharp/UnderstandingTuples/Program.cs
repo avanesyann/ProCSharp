@@ -75,6 +75,15 @@ namespace UnderstandingTuples
 
             var analyzedSentence = AnalyzeSentence("This.. is a sentence, containing punctuation!");
             Console.WriteLine($"Word Count: {analyzedSentence.WordCount} | Longest word: {analyzedSentence.LongestWord} | Average length: {analyzedSentence.AverageLength}");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Inferred Tuple Names");
+            var foo = new { Prop1 = "first", Prop2 = "second" };
+            var bar = (foo.Prop1, foo.Prop2);
+
+            Console.WriteLine($"{foo.Prop1}; {foo.Prop2}");
+            Console.WriteLine($"{bar.Prop1}; {bar.Prop2}");
         }
 
         static (int Number, string Horsie, bool IsStrong) FillTheseValues()
