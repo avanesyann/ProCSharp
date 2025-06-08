@@ -4,7 +4,7 @@
     {
         public string Name { get; set; }
         public int PotionCount { get; set; } = 0;
-        Potion? EquippedPotion { get; set; }
+        public Potion? EquippedPotion { get; set; }
 
         public Player(string name, int potionCount, Potion? equippedPotion)
         {
