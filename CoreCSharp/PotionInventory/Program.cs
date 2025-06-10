@@ -11,6 +11,7 @@
             List<Player?> players = new List<Player?>();
             players.Add(new Player("Mario", 2, healing));
             players.Add(new Player("Terminator", 12, null));
+            players.Add(new Player("Carlos", 3, megaHeal));
             players.Add(new Player("John Wick", 4, rehab));
 
             foreach (Player? player in players)
