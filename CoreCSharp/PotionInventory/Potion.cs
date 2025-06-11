@@ -1,13 +1,14 @@
 ﻿namespace PotionInventory
 {
-    class Potion
+    enum PotionType { Healing, Mana, Stamina, Rehabilitating }
+    struct Potion
     {
-        public string Name { get; set; }
+        public PotionType Type { get; set; }
         public int RestoreAmount { get; set; }
 
-        public Potion(string name, int restoreAmount)
+        public Potion(PotionType type, int restoreAmount)
         {
-            Name = name;
+            Type = type;
             RestoreAmount = restoreAmount;
         }
     }
