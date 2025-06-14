@@ -2,19 +2,19 @@
 {
     class Car
     {
-        private string Name;
-        private int Speed;
+        private string _name;
+        private int _speed;
 
-        public Car(string name) => Name = name;
+        public Car(string name) => _name = name;
         public Car(string name, int speed)
         {
-            Name = name;
-            Speed = speed;
+            _name = name;
+            _speed = speed;
         }
         public Car(string name, int speed, out bool inDanger)
         {
-            Name = name;
-            Speed = speed;
+            _name = name;
+            _speed = speed;
 
             if (speed >= 120)
             {
@@ -26,7 +26,7 @@
             }
         }
 
-        public void PrintState() => Console.WriteLine("{0} is going {1} KM/H.", Name, Speed);
-        public void SpeedUp(int delta) => Speed += delta;
+        public void PrintState() => Console.WriteLine("{0} is going {1} KM/H.", _name, _speed);
+        public void SpeedUp(int delta) => _speed += delta;
     }
 }

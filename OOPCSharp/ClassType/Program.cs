@@ -15,15 +15,45 @@
             }
 
             amg.PrintState();
-            
+
             lambo.PrintState();
 
             Console.WriteLine();
             Console.WriteLine();
 
-            Motorcycle mc = new Motorcycle(2);
-            Motorcycle mcNoCtor = new Motorcycle();
-            mc.PopAWheely();
+            //Console.WriteLine("Motorcycle 1");
+            //Motorcycle miny = new Motorcycle(5);
+            //miny.SetDriverName("Miny");
+            //miny.PopAWheely();
+            //Console.WriteLine("Rider name is {0}", miny.driverName);
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("Motorcycle 2");
+            //Motorcycle tiny = new Motorcycle("Tiny");
+            //tiny.PopAWheely();
+            //Console.WriteLine("Rider name is {0}", tiny.driverName);
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("Motorcycle 3");
+            //Motorcycle shiny = new Motorcycle(10, "Shiny");
+            //tiny.PopAWheely();
+            //Console.WriteLine("Rider name is {0}", tiny.driverName);
+
+            MakeSomeBikes();
+        }
+        static void MakeSomeBikes()
+        {
+            Motorcycle m1 = new Motorcycle();
+            Console.WriteLine("Name = {0}, Intensity = {1}", m1.driverName, m1.driverIntensity);
+
+            Motorcycle m2 = new Motorcycle(name: "Tiny");
+            Console.WriteLine("Name = {0}, Intensity = {1}", m2.driverName, m2.driverIntensity);
+
+
+            Motorcycle m3 = new Motorcycle(7);
+            Console.WriteLine("Name = {0}, Intensity = {1}", m3.driverName, m3.driverIntensity);
         }
     }
 }
