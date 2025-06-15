@@ -42,6 +42,29 @@
             //Console.WriteLine("Rider name is {0}", tiny.driverName);
 
             MakeSomeBikes();
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // Static Data And Members
+
+            Console.WriteLine("Static Data And Members");
+            SavingsAccount s1 = new SavingsAccount(50);
+            SavingsAccount s2 = new SavingsAccount(100);
+
+            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s1.currBalance, SavingsAccount.GetInterestRate());
+            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s2.currBalance, SavingsAccount.GetInterestRate());
+
+            SavingsAccount.SetInterestRate(0.08);
+
+            SavingsAccount s3 = new SavingsAccount(10000.75);
+
+            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s3.currBalance, SavingsAccount.GetInterestRate());
+
+            Console.WriteLine();
+
+            TimeUtilClass.PrintTime();
+            TimeUtilClass.PrintDate();
         }
         static void MakeSomeBikes()
         {
