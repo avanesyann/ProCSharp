@@ -4,9 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Book book = new Book();
-            book.Title = "Flowers for Algernon";
-            book.ID = 1;
+            Book book = new Book("Flowers for Algernon", "Novel");
 
             LibraryUser lu = new LibraryUser();
             lu.BorrowBook(book);
