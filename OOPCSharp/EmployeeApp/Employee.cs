@@ -10,6 +10,7 @@
         private int _empAge;
         private string _empSSN;
         private EmployeePayTypeEnum _payType;
+        private DateTime _hireDate;
 
         public Employee() { }
         public Employee(string name, int id, float pay, string empSsn) : this(name, 0, id, pay, empSsn, EmployeePayTypeEnum.Salaried) { }
@@ -63,14 +64,19 @@
             get => _payType;
             set => _payType = value;
         }
+        public DateTime HireDate
+        {
+            get => _hireDate;
+            set => _hireDate = value;
+        }
 
         public void GiveBonus(float amount)
         {
             Pay = this switch
             {
-                { PayType: EmployeePayTypeEnum.Commission } => Pay += .10F * amount,
-                { PayType: EmployeePayTypeEnum.Hourly } => Pay += 40F * amount / 2080F,
-                { PayType: EmployeePayTypeEnum.Salaried } => Pay += amount,
+                { Age: >= 18, PayType: EmployeePayTypeEnum.Commission,  HireDate: { Year: > 2020 } } => Pay += .10F * amount,
+                { Age: >= 18, PayType: EmployeePayTypeEnum.Hourly,      HireDate: { Year: > 2020 } } => Pay += 40F * amount / 2080F,
+                { Age: >= 18, PayType: EmployeePayTypeEnum.Salaried,    HireDate: { Year: > 2020 } } => Pay += amount,
                 _ => Pay += 0
             };
         }
