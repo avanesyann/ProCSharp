@@ -4,8 +4,8 @@ namespace ClassType
 {
     class SavingsAccount
     {
-        public static double currInterestRate;
         public double currBalance;
+        private static double _currInterestRate;
 
         public SavingsAccount(double balance)
         {
@@ -14,13 +14,18 @@ namespace ClassType
         static SavingsAccount()                             // The static constructor executes before any instance-level constructors.
         {
             Console.WriteLine("In static constructor!");
-            currInterestRate = 0.4;
+            _currInterestRate = 0.4;
+        }
+        public static double InterestRate
+        {
+            get { return _currInterestRate; }
+            set { _currInterestRate = value; }
         }
 
-        public static void SetInterestRate(double newRate)
+        /* public static void SetInterestRate(double newRate)
         {
-            currInterestRate = newRate;
+            _currInterestRate = newRate;
         }
-        public static double GetInterestRate() => currInterestRate;
+        public static double GetInterestRate() => _currInterestRate; */
     }
 }

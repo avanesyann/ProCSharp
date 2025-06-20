@@ -8,15 +8,19 @@
         private int _empId;
         private float _currPay;
         private int _empAge;
+        private string _empSSN;
+        private EmployeePayTypeEnum _payType;
 
         public Employee() { }
-        public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
-        public Employee(string name, int age, int id, float pay)
+        public Employee(string name, int id, float pay, string empSsn) : this(name, 0, id, pay, empSsn, EmployeePayTypeEnum.Salaried) { }
+        public Employee(string name, int age, int id, float pay, string empSsn, EmployeePayTypeEnum payType)
         {
-            _empName = name;
-            _empAge = age;
-            _empId = id;
-            _currPay = pay;
+            Name = name;
+            Age = age;
+            Id = id;
+            Pay = pay;
+            SocialSecurityNumber = empSsn;
+            PayType = payType;
         }
 
         public string Name
@@ -49,8 +53,27 @@
             get { return _empAge; }
             set { _empAge = value; }
         }
+        public string SocialSecurityNumber
+        {
+            get { return _empSSN; }
+            private set { _empSSN = value; }
+        }
+        public EmployeePayTypeEnum PayType
+        {
+            get => _payType;
+            set => _payType = value;
+        }
 
-        public void GiveBonus(float amount) => _currPay += amount;
+        public void GiveBonus(float amount)
+        {
+            Pay = this switch
+            {
+                { PayType: EmployeePayTypeEnum.Commission } => Pay += .10F * amount,
+                { PayType: EmployeePayTypeEnum.Hourly } => Pay += 40F * amount / 2080F,
+                { PayType: EmployeePayTypeEnum.Salaried } => Pay += amount,
+                _ => Pay += 0
+            };
+        }
         public void DisplayStats()
         {
             Console.WriteLine("Name: {0}", _empName);

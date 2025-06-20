@@ -52,14 +52,14 @@
             SavingsAccount s1 = new SavingsAccount(50);
             SavingsAccount s2 = new SavingsAccount(100);
 
-            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s1.currBalance, SavingsAccount.GetInterestRate());
-            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s2.currBalance, SavingsAccount.GetInterestRate());
+            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s1.currBalance, SavingsAccount.InterestRate);
+            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s2.currBalance, SavingsAccount.InterestRate);
 
-            SavingsAccount.SetInterestRate(0.08);
+            SavingsAccount.InterestRate = 0.08;
 
             SavingsAccount s3 = new SavingsAccount(10000.75);
 
-            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s3.currBalance, SavingsAccount.GetInterestRate());
+            Console.WriteLine("Balance: {0}, Interest Rate: {1}", s3.currBalance, SavingsAccount.InterestRate);
 
             Console.WriteLine();
 
