@@ -2,23 +2,78 @@
 {
     internal class Book
     {
-        public string Title;
-        private string _secretNote;
-        internal int ID;
-        protected string Genre;
+        private string _title;
+        private string _author;
+        public bool IsAvailable { get; private set; } = true;
+        private int _pages;
+        public int BorrowCount { get; private set; }
 
-        public Book(string title, string genre)
+        public Book(string title, string author, int pages)
         {
             Title = title;
-            Genre = genre;
+            Author = author;
+            Pages = pages;
         }
-    }
-    internal class PremiumBook : Book
-    {
-        public PremiumBook(string title, string genre) : base(title, genre) { }
-        public void RevealGenre()
+
+        public string Title
         {
-            Console.WriteLine($"{Title}'s genre is {Genre}");
+            get => _title;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    Console.WriteLine("Couldn't assign a title.");
+                else
+                    _title = value;
+            }
+        }
+        public string Author
+        {
+            get => _author;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    Console.WriteLine("Couldn't assign an author.");
+                else
+                    _author = value;
+            }
+        }
+        public int Pages
+        {
+            get => _pages;
+            set
+            {
+                if (value < 0)
+                    Console.WriteLine("Page count can't be negative.");
+                else
+                    _pages = value;
+            }
+        }
+
+
+        public void Borrow()
+        {
+            if (IsAvailable)
+            {
+                Console.WriteLine($"You borrowed: {Title} by {Author}, happy reading!");
+                IsAvailable = false;
+                BorrowCount++;
+            }
+            else
+            {
+                Console.WriteLine($"The book is not available.");
+            }
+        }
+        public void Return()
+        {
+            if (!IsAvailable)
+            {
+                Console.WriteLine($"You returned: {Title} by {Author}, hope you liked it!");
+                IsAvailable = true;
+            }
+            else
+            {
+                Console.WriteLine($"The book is not borrowed.");
+            }
         }
     }
 }

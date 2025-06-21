@@ -4,10 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Book book = new Book("Flowers for Algernon", "Novel");
+            List<Book> books = new List<Book>();
+            books.Add(new Book("War and Peace", "Leo Tolstoy", 1225));
+            books.Add(new Book("To Kill a Mockingbird", "Harper Lee", 336));
+            books.Add(new Book("Flowers for Algernon", "Daniel Keyes", 311));
 
-            LibraryUser lu = new LibraryUser();
-            lu.BorrowBook(book);
+            foreach (Book book in books)
+            {
+                Console.WriteLine($"{book.Title, -25} [{book.Pages, 4}] | {book.Author}");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            books[1].Borrow();
+            books[1].Borrow();
+            books[1].Return();
         }
     }
 }

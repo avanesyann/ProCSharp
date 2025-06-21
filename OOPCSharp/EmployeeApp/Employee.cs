@@ -4,10 +4,10 @@
     {
         // Members of a class that represent an object's state should not be marked as public.
 
-        private string _empName;
-        private int _empId;
-        private float _currPay;
-        private int _empAge;
+        private string _empName;                // backing field
+        private int _empId;                     // backing field
+        private float _currPay;                 // ...
+        private int _empAge;                    // ..
         private string _empSSN;
         private EmployeePayTypeEnum _payType;
         private DateTime _hireDate;
