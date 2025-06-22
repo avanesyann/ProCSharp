@@ -7,12 +7,14 @@
         public bool IsAvailable { get; private set; } = true;
         private int _pages;
         public int BorrowCount { get; private set; }
+        public static int TotalBooks { get; private set; }
 
         public Book(string title, string author, int pages)
         {
             Title = title;
             Author = author;
             Pages = pages;
+            TotalBooks++;
         }
 
         public string Title

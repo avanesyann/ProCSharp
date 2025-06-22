@@ -15,11 +15,14 @@
             }
 
             Console.WriteLine();
+            Console.WriteLine($"{Book.TotalBooks} total books in the library.");
             Console.WriteLine();
 
             books[1].Borrow();
             books[1].Borrow();
             books[1].Return();
+
+            Console.WriteLine();
         }
     }
 }
