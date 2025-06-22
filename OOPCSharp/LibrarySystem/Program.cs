@@ -16,13 +16,19 @@
 
             Console.WriteLine();
             Console.WriteLine($"{Book.TotalBooks} total books in the library.");
+            Console.WriteLine($"{Book.AvailableBooks} of them are available.");
+            Console.WriteLine($"{Book.BorrowedBooks} of them are borrowed.");
             Console.WriteLine();
 
             books[1].Borrow();
             books[1].Borrow();
             books[1].Return();
+            books[2].Borrow();
 
             Console.WriteLine();
+            Console.WriteLine($"{Book.TotalBooks} total books in the library.");
+            Console.WriteLine($"{Book.AvailableBooks} of them are available.");
+            Console.WriteLine($"{Book.BorrowedBooks} of them are borrowed.");
         }
     }
 }
