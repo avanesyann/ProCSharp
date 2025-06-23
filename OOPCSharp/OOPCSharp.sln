@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarySystem", "LibrarySys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeApp", "EmployeeApp\EmployeeApp.csproj", "{3D366F1B-C6F2-4BF6-96BF-8D4A85A07544}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoProps", "AutoProps\AutoProps.csproj", "{FEA44757-A378-408E-80AF-97D0018396A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3D366F1B-C6F2-4BF6-96BF-8D4A85A07544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D366F1B-C6F2-4BF6-96BF-8D4A85A07544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D366F1B-C6F2-4BF6-96BF-8D4A85A07544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA44757-A378-408E-80AF-97D0018396A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA44757-A378-408E-80AF-97D0018396A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA44757-A378-408E-80AF-97D0018396A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA44757-A378-408E-80AF-97D0018396A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
