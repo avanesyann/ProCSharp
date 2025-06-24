@@ -4,31 +4,17 @@
     {
         static void Main(string[] args)
         {
-            List<Book> books = new List<Book>();
-            books.Add(new Book("War and Peace", "Leo Tolstoy", 1225));
-            books.Add(new Book("To Kill a Mockingbird", "Harper Lee", 336));
-            books.Add(new Book("Flowers for Algernon", "Daniel Keyes", 311));
+            Library library = new Library();
+            library.AddBook(new Book("War and Peace", "Leo Tolstoy", 1225));
+            library.AddBook(new Book("To Kill a Mockingbird", "Harper Lee", 336));
+            library.AddBook(new Book("Flowers for Algernon", "Daniel Keyes", 311));
 
-            foreach (Book book in books)
-            {
-                Console.WriteLine($"{book.Title, -25} [{book.Pages, 4}] | {book.Author}");
-            }
+            library.DisplayStats();
 
-            Console.WriteLine();
-            Console.WriteLine($"{Book.TotalBooks} total books in the library.");
-            Console.WriteLine($"{Book.AvailableBooks} of them are available.");
-            Console.WriteLine($"{Book.BorrowedBooks} of them are borrowed.");
-            Console.WriteLine();
+            library.FindByTitle("War and Peace")?.Borrow();
+            library.FindByTitle("Flowers for Algernon")?.Borrow();
 
-            books[1].Borrow();
-            books[1].Borrow();
-            books[1].Return();
-            books[2].Borrow();
-
-            Console.WriteLine();
-            Console.WriteLine($"{Book.TotalBooks} total books in the library.");
-            Console.WriteLine($"{Book.AvailableBooks} of them are available.");
-            Console.WriteLine($"{Book.BorrowedBooks} of them are borrowed.");
+            library.DisplayStats();
         }
     }
 }
