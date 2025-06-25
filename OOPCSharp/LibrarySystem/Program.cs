@@ -15,6 +15,8 @@
             library.FindByTitle("Flowers for Algernon")?.Borrow();
 
             library.DisplayStats();
+
+            library.FindByAuthor("Leo Tolstoy");
         }
     }
 }

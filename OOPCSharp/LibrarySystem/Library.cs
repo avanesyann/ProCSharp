@@ -14,6 +14,13 @@
         }
         public Book? FindByTitle(string title) 
             => _books.FirstOrDefault(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+        public void FindByAuthor(string author)
+        {
+            foreach (Book book in _books.Where(b => b.Author.Equals(author, StringComparison.OrdinalIgnoreCase)))
+            {
+                Console.WriteLine(book.Title);
+            }
+        }
 
         public int TotalBooks => _books.Count;
         public int AvailableBooks => _books.Count(b => b.IsAvailable);
