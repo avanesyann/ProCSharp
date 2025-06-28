@@ -28,6 +28,10 @@
             secondReadonlyPoint.DisplayStats();
 
             Console.WriteLine();
+
+            Point pt = new Point(10, 20) { X = 100, Y = 100 };
+            pt.DisplayStats();
+            Console.WriteLine();
         }
     }
 }
