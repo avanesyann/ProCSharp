@@ -32,6 +32,14 @@
             Point pt = new Point(10, 20) { X = 100, Y = 100 };
             pt.DisplayStats();
             Console.WriteLine();
+
+            Console.WriteLine();
+
+            Point goldPoint = new Point(PointColorEnum.Gold) { X = 90, Y = 20 };
+            goldPoint.DisplayStats();
+
+            Point gPoint = new Point() { X = 160, Y = 60 };
+            gPoint.DisplayStats();
         }
     }
 }
