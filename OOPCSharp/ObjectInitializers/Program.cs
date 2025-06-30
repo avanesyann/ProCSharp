@@ -40,6 +40,26 @@
 
             Point gPoint = new Point() { X = 160, Y = 60 };
             gPoint.DisplayStats();
+
+            Console.WriteLine();
+
+            Rectangle myRect = new Rectangle
+            {
+                TopLeft = new Point { X = 10, Y = 10 },
+                BottomRight = new Point { X = 200, Y = 200 }
+            };
+            myRect.DisplayStats();
+
+            // Old-school approach.
+            //Rectangle r = new Rectangle();
+            //Point p1 = new Point();
+            //p1.X = 10;
+            //p1.Y = 10;
+            //r.TopLeft = p1;
+            //Point p2 = new Point();
+            //p2.X = 200;
+            //p2.Y = 200;
+            //r.BottomRight = p2;
         }
     }
 }
