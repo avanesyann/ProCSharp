@@ -16,6 +16,7 @@
             => _books.FirstOrDefault(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
         public void FindByAuthor(string author)
         {
+            Console.WriteLine("Books by {0}:", author);
             foreach (Book book in _books.Where(b => b.Author.Equals(author, StringComparison.OrdinalIgnoreCase)))
             {
                 Console.WriteLine(book.Title);
