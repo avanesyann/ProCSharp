@@ -21,10 +21,15 @@
             library.FindByTitle("War and Peace")?.Borrow();
             library.FindByTitle("Flowers for Algernon")?.Borrow();
             library.FindByTitle("In Search of Lost Time")?.Borrow();
+            library.FindByTitle("Madame Bovary")?.Borrow();
 
             library.DisplayStats();
 
             library.FindByAuthor("Leo Tolstoy");
+            library.FindByTitle("Anna Karenina")?.Borrow();
+            library.FindByTitle("War and Peace")?.Return();
+
+            library.DisplayStats();
         }
     }
 }

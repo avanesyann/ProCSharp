@@ -21,6 +21,7 @@
             {
                 Console.WriteLine(book.Title);
             }
+            Console.WriteLine();
         }
 
         public int TotalBooks => _books.Count;
