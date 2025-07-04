@@ -10,6 +10,8 @@
             const string bar = "Bar";
             const string foobar = $"{foo}{bar}";
             Console.WriteLine(foobar);
+
+            Console.WriteLine(MyMathClass.SROPI);
         }
     }
 }
