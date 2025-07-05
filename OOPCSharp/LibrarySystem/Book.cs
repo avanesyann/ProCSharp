@@ -6,6 +6,8 @@
         private string _author;
         public bool IsAvailable { get; private set; } = true;
         private int _pages;
+        private DateTime BorrowedOn { get; set; }
+        private readonly int ReturnDeadline = 1;
 
         public Book(string title, string author, int pages)
         {
@@ -55,6 +57,7 @@
             {
                 Console.WriteLine($"You borrowed: {Title} by {Author}, happy reading!");
                 IsAvailable = false;
+                BorrowedOn = DateTime.Now;
             }
             else
             {
@@ -65,7 +68,13 @@
         {
             if (!IsAvailable)
             {
-                Console.WriteLine($"You returned: {Title} by {Author}, hope you liked it!");
+                
+                if ((DateTime.Now.Year - BorrowedOn.Year) > ReturnDeadline)
+                    Console.Write("You returned late: ");
+                else
+                    Console.Write("You returned on time: ");
+
+                Console.Write($"{Title} by {Author}, hope you liked it!");
                 IsAvailable = true;
             }
             else
