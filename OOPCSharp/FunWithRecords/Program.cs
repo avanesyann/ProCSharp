@@ -16,15 +16,17 @@ lexus.DisplayStats();
 Console.WriteLine();
 
 Console.WriteLine("*** Records ***");
-CarRecord mercedes = new CarRecord
-{
-    Make = "Mercedes-Benz",
-    Model = "S-Class",
-    Color = "Black"
-};
-mercedes.DisplayStats();
-Console.WriteLine();
+//CarRecord mercedes = new CarRecord
+//{
+//    Make = "Mercedes-Benz",
+//    Model = "S-Class",
+//    Color = "Black"
+//};
+//mercedes.DisplayStats();
+//Console.WriteLine();
 
 CarRecord bmw = new CarRecord("BMW", "M4", "Dark Gray");
-bmw.DisplayStats();
+Console.WriteLine(bmw.Make);
+Console.WriteLine(bmw.Model);
+Console.WriteLine(bmw.Color);
 Console.WriteLine();
