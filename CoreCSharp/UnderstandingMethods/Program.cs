@@ -44,6 +44,10 @@
             else
                 Console.WriteLine($"Parsing failed. Default value: {temp}");
 
+            Console.WriteLine();
+
+            CalculateTotal("Alice", discount: 10, 50, 30, 20);
+            CalculateTotal("Bob", discount: 10, 40, 20, 28);
         }
 
         static int AddWrapper(int x, int y)
@@ -127,6 +131,19 @@
 
             temperature = 0;
             return false;
+        }
+
+        static void CalculateTotal(string customerName, double discount = 0, params double[] prices)
+        {
+            double total = 0;
+            foreach (double price in prices)
+            {
+                total += price;
+            }
+            Console.WriteLine("Customer: {0}", customerName);
+            Console.WriteLine("Total before discount: {0:C}", total);
+            Console.WriteLine("Discount: {0}%", discount);
+            Console.WriteLine("Final Total: {0:C}", total - (total * discount / 100));
         }
     }
 }
