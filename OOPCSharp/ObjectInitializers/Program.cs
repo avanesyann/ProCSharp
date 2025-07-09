@@ -1,4 +1,6 @@
-﻿namespace ObjectInitializers
+﻿using System.Security;
+
+namespace ObjectInitializers
 {
     internal class Program
     {
@@ -60,6 +62,27 @@
             //p2.X = 200;
             //p2.Y = 200;
             //r.BottomRight = p2;
+
+            Console.WriteLine();
+
+            Animal panda = new Animal
+            {
+                Name = "Po",
+                Species = "Giant Panda",
+                Age = 22,
+                IsEndangered = true
+            };
+
+            Animal lion = new Animal("Alex", "Lion", 15, isEndangered: false)
+            {
+                Name = "Zuba",
+                Species = "Lion",
+                Age = 40,
+                IsEndangered = false
+            };
+
+            Console.WriteLine($"{panda.Name, -10} | {panda.Age, 3} | {panda.Species, -20}");
+            Console.WriteLine($"{lion.Name, -10} | {lion.Age, 3} | {lion.Species, -20}");
         }
     }
 }
