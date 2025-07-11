@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BasicInheritance
 {
-    class Car
+    class Car   // base class, aka superclass, parent class
     {
         public readonly int MaxSpeed;
         private int _currSpeed;
@@ -32,5 +32,10 @@ namespace BasicInheritance
                 }
             }
         }
+    }
+    // sealed class, meaning that you can't derive from this class
+    sealed class MiniVan : Car     // derived class, aka child class
+    {
+        public bool HasSlidingDoor { get; set; }
     }
 }
