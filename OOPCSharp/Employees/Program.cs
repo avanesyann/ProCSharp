@@ -7,3 +7,5 @@ SalesPerson fred = new SalesPerson
     Name = "Fred",
     SalesNumber = 50
 };
+
+Manager chucky = new Manager("Chucky", 50, 92, 1000000, "333-23-2322", 9000);

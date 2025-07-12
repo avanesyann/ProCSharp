@@ -26,9 +26,9 @@
         }
         public void DisplayStats()
         {
-            Console.WriteLine("Name: {0}", _empName);
-            Console.WriteLine("ID: {0}", _empId);
-            Console.WriteLine("Pay: {0}", _currPay);
+            Console.WriteLine("Name: {0}", EmpName);
+            Console.WriteLine("ID: {0}", EmpId);
+            Console.WriteLine("Pay: {0}", CurrPay);
         }
     }
 }

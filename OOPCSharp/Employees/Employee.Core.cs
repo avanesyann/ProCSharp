@@ -4,58 +4,48 @@
     {
         // Members of a class that represent an object's state should not be marked as public.
 
-        private string _empName;                // backing field
-        private int _empId;                     // backing field
-        private float _currPay;                 // ...
-        private int _empAge;                    // ..
-        private string _empSSN;
-        private EmployeePayTypeEnum _payType;
-        private DateTime _hireDate;
+        protected string EmpName;             
+        protected int EmpId;                   
+        protected float CurrPay;             
+        protected int EmpAge;                
+        protected string EmpSsn;
+        protected EmployeePayTypeEnum PayType { get; set; }
+        protected DateTime HireDate { get; set; }
 
         public string Name
         {
-            get { return _empName; }
+            get { return EmpName; }
             set
             {
-                if (value.Length > 15)      // "value" is a contextual keyword, not a true C# keyword
+                if (value.Length > 15) 
                 {
                     Console.WriteLine("Error! Name length exceeds 15 characters!");
                 }
                 else
                 {
-                    _empName = value;
+                    EmpName = value;
                 }
             }
         }
         public int Id
         {
-            get => _empId;
-            set => _empId = value;
+            get => EmpId;
+            set => EmpId = value;
         }
         public float Pay
         {
-            get { return _currPay; }
-            set { _currPay = value; }
+            get { return CurrPay; }
+            set { CurrPay = value; }
         }
         public int Age
         {
-            get { return _empAge; }
-            set { _empAge = value; }
+            get { return EmpAge; }
+            set { EmpAge = value; }
         }
         public string SocialSecurityNumber
         {
-            get { return _empSSN; }
-            private set { _empSSN = value; }
-        }
-        public EmployeePayTypeEnum PayType
-        {
-            get => _payType;
-            set => _payType = value;
-        }
-        public DateTime HireDate
-        {
-            get => _hireDate;
-            set => _hireDate = value;
+            get { return EmpSsn; }
+            private set { EmpSsn = value; }
         }
     }
 }
