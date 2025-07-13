@@ -30,5 +30,15 @@
             Console.WriteLine("ID: {0}", EmpId);
             Console.WriteLine("Pay: {0}", CurrPay);
         }
+
+        // Expose certain benefit behaviors of object.
+        public double GetBenefitCost() => EmpBenefits.ComputePayDeduction();
+
+        // Expose object thorugh a custom property
+        public BenefitPackage Benefits
+        {
+            get { return Benefits; }
+            set { Benefits = value; }
+        }
     }
 }

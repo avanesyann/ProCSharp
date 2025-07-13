@@ -12,6 +12,9 @@
         protected EmployeePayTypeEnum PayType { get; set; }
         protected DateTime HireDate { get; set; }
 
+        // Contain a BenefitPackage object.
+        protected BenefitPackage EmpBenefits = new BenefitPackage();
+
         public string Name
         {
             get { return EmpName; }
