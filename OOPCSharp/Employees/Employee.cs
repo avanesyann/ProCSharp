@@ -1,7 +1,21 @@
 ﻿namespace Employees
 {
+    // Employee nests BenefitPackage.
     partial class Employee
     {
+        // BenefitPackage nests BenefitPackageLevel.
+        public class BenefitPackage
+        {
+            public enum BenefitPackageLevel
+            {
+                Standard, Gold, Platinum
+            }
+            public double ComputePayDeduction()
+            {
+                return 125.0;
+            }
+        }
+
         public Employee() { }
         public Employee(string name, int id, float pay, string empSsn) : this(name, 0, id, pay, empSsn, EmployeePayTypeEnum.Salaried) { }
         public Employee(string name, int age, int id, float pay, string empSsn, EmployeePayTypeEnum payType)

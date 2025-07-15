@@ -2,3 +2,9 @@
 
 Exposing the functionality of the contained object to the outside world requires delegation. 
 *Delegation* is simply the act of adding public members to the containing class (Employee) that use the contained object's (BenefitPackage) functionality.
+
+
+## Nested Types
+
+In C#, it is possible to define a type directly within the scope of a class or structure. When you have done so, the nested (inner) type is considered a member of the nesting (outer) class.
+A public nested type can be used by anybody, while a private nested type can be used by members of the containing class.

@@ -12,3 +12,5 @@ Manager chucky = new Manager("Chucky", 50, 92, 1000000, "333-23-2322", 9000);
 
 double cost = chucky.GetBenefitCost();
 Console.WriteLine($"Benefit Cost: {cost}");
+
+Employee.BenefitPackage.BenefitPackageLevel myBenefitLevel = Employee.BenefitPackage.BenefitPackageLevel.Platinum;
