@@ -28,7 +28,7 @@
             PayType = payType;
         }
 
-        public void GiveBonus(float amount)
+        public virtual void GiveBonus(float amount)
         {
             Pay = this switch
             {
@@ -38,11 +38,13 @@
                 _ => Pay += 0
             };
         }
-        public void DisplayStats()
+        public virtual void DisplayStats()
         {
             Console.WriteLine("Name: {0}", EmpName);
             Console.WriteLine("ID: {0}", EmpId);
-            Console.WriteLine("Pay: {0}", CurrPay);
+            Console.WriteLine("Age: {0}", Age);
+            Console.WriteLine("Pay: {0}", Pay);
+
         }
 
         // Expose certain benefit behaviors of object.
