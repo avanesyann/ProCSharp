@@ -29,3 +29,7 @@ Console.WriteLine();
 
 // For this reason, using the virtual and override keywords comes handy.
 // ...
+
+
+// Cannot create an instance of an abstract class.
+Employee employee = new Employee();

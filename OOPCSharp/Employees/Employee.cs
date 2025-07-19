@@ -1,7 +1,7 @@
 ﻿namespace Employees
 {
     // Employee nests BenefitPackage.
-    partial class Employee
+    abstract partial class Employee
     {
         // BenefitPackage nests BenefitPackageLevel.
         public class BenefitPackage
