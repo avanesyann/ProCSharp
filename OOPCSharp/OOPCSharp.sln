@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees", "Employees\Empl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome", "SmartHome\SmartHome.csproj", "{C92FA545-9B7F-46C3-BF94-7E24B61DD055}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeDrawing", "ShapeDrawing\ShapeDrawing.csproj", "{5A2421EA-434B-4C6E-BE5E-AA82F9B59BC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C92FA545-9B7F-46C3-BF94-7E24B61DD055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C92FA545-9B7F-46C3-BF94-7E24B61DD055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C92FA545-9B7F-46C3-BF94-7E24B61DD055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A2421EA-434B-4C6E-BE5E-AA82F9B59BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2421EA-434B-4C6E-BE5E-AA82F9B59BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2421EA-434B-4C6E-BE5E-AA82F9B59BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2421EA-434B-4C6E-BE5E-AA82F9B59BC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
