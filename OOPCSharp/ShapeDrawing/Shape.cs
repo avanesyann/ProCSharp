@@ -1,7 +1,12 @@
 ﻿namespace ShapeDrawing
 {
-    abstract class Shape
+    abstract partial class Shape
     {
+        public abstract void Draw();
 
+        public virtual void Describe()
+        {
+            Console.WriteLine("You've created a shape.");
+        }
     }
 }
