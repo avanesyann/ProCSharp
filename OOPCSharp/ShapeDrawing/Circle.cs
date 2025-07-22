@@ -14,5 +14,9 @@
             base.Describe();
             Console.WriteLine($"Your shape is a {Color} circle.");
         }
+        public override double GetArea()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

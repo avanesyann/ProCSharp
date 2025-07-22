@@ -8,5 +8,7 @@
         {
             Console.WriteLine("You've created a shape.");
         }
+
+        public abstract double GetArea();
     }
 }
