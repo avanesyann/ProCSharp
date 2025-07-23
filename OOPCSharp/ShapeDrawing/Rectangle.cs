@@ -2,6 +2,9 @@
 {
     class Rectangle : Shape
     {
+        public double Width { get; set; }
+        public double Height { get; set; }
+
         public Rectangle(string color) : base(color) { }
         public override void Describe()
         {
@@ -14,7 +17,15 @@
         }
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            if (Width <= 0 || Height <= 0)
+            {
+                Console.WriteLine("The size of the rectangle is not set.");
+                return 0;
+            }
+            else
+            {
+                return Width * Height;
+            }
         }
     }
 }
