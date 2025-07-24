@@ -18,6 +18,10 @@
             r1.Height = 10;
             Console.WriteLine("Area: {0:F2}", r1.GetArea());
             Console.WriteLine();
+
+            Circle c2 = new Circle("Teal");
+            c2.Radius = 4;
+            c2.Describe();
         }
     }
 }
