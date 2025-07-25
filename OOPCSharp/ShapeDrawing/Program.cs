@@ -22,6 +22,13 @@
             Circle c2 = new Circle("Teal");
             c2.Radius = 4;
             c2.Describe();
+
+            Shape[] myShapes = {new Circle("Brown"), new Rectangle("Purple"), new Circle("Green"), new Rectangle("Blue")};
+
+            foreach (Shape s in myShapes)
+            {
+                s.Describe();
+            }
         }
     }
 }
