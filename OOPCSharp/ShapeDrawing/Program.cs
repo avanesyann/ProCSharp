@@ -29,6 +29,15 @@
             {
                 s.Describe();
             }
+
+            // Method Shadowing
+
+            // This calls the draw method of the ThreeDCircle.
+            ThreeDCircle o = new ThreeDCircle("Black");
+            o.Draw();
+
+            // This calls the draw method of the parent.
+            ((Circle)o).Draw();
         }
     }
 }

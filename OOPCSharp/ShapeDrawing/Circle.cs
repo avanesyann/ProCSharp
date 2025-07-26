@@ -28,4 +28,15 @@
             }
         }
     }
+
+    class ThreeDCircle : Circle
+    {
+        public ThreeDCircle(string color) : base(color) { }
+
+        // Hide any Draw() implementation above me
+        public new void Draw()
+        {
+            Console.WriteLine("Drawing a 3D circle.");
+        }
+    }
 }
