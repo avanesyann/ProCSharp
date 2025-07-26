@@ -32,4 +32,31 @@ Console.WriteLine();
 
 
 // Cannot create an instance of an abstract class.
-Employee employee = new Employee();
+// Employee employee = new Employee();
+
+
+CastingExamples();
+static void CastingExamples()
+{
+    // A Manager "is-a" System.Object, so we can
+    // store a Manager reference in an object variable just fine.
+    object frank = new Manager("Frank Zappa", 9, 3000, 40000, "111-11-1111", 5);
+
+    // A Manager "is-an" Employee too.
+    Employee moonUnit = new Manager("MoonUnit Zapa", 2, 3001, 20000, "101-11-1010", 1);
+
+    // A PtSalesPerson "is-a" SalesPerson.
+    SalesPerson jill = new SalesPerson("Jill", 32, 3002, 10000, "111-12-1119", 90);
+
+
+    object john = new Manager("John", 34, 3003, 50000, "111-13-1113", 4);
+    // Error!
+    // GivePromotion(john);
+
+    // (ClassIWantToCastTo)ReferenceIHave
+    GivePromotion((Manager)john);
+}
+static void GivePromotion(Employee emp)
+{
+    Console.WriteLine("{0} was promoted!", emp.Name);
+}
