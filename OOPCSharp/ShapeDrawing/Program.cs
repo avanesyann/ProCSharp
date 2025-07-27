@@ -35,6 +35,7 @@
             // This calls the draw method of the ThreeDCircle.
             ThreeDCircle o = new ThreeDCircle("Black");
             o.Draw();
+            o.Describe();
 
             // This calls the draw method of the parent.
             ((Circle)o).Draw();
