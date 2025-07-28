@@ -93,5 +93,23 @@ static void CastingExamples()
 }
 static void GivePromotion(Employee emp)
 {
-    Console.WriteLine("{0} was promoted!", emp.Name);
+    if (emp is not Manager and not SalesPerson)
+    {
+        Console.WriteLine("Unable to promote {0}. Wrong employee type", emp.Name);
+    }
+    else
+    {
+        Console.WriteLine("{0} was promoted!", emp.Name);
+    }
+
+    if (emp is SalesPerson)
+    {
+        Console.WriteLine("{0} made {1} sale(s)!", emp.Name, ((SalesPerson)emp).SalesNumber);
+        Console.WriteLine();
+    }
+    else if (emp is Manager m)
+    {
+        Console.WriteLine("{0} had {1} stock options...", m.Name, m.StockOptions);
+        Console.WriteLine();
+    }
 }
