@@ -36,6 +36,41 @@ Console.WriteLine();
 
 
 CastingExamples();
+
+object frank = new Manager("Frank Zapp", 9, 3003, 40000, "111-11-1111", 5);
+Hexagon hex;
+
+try
+{
+    hex = (Hexagon)frank;
+}
+catch (InvalidCastException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+Console.WriteLine();
+
+// use "as" to test compatibility
+object[] things = new object[4];
+things[0] = new Hexagon();
+things[1] = false;
+things[2] = new Manager("John Doe", 9, 0001, 40000, "111-11-1111", 5);
+things[3] = "Last thing";
+
+foreach (object item in things)
+{
+    Hexagon h = item as Hexagon;
+    if (h == null)
+    {
+        Console.WriteLine("Item is not a hexagon");
+    }
+    else
+    {
+        h.Draw();
+    }
+}
+
+
 static void CastingExamples()
 {
     // A Manager "is-a" System.Object, so we can
