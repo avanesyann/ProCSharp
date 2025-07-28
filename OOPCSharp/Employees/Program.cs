@@ -83,6 +83,8 @@ static void CastingExamples()
     // A PtSalesPerson "is-a" SalesPerson.
     SalesPerson jill = new SalesPerson("Jill", 32, 3002, 10000, "111-12-1119", 90);
 
+    Hexagon hexagon = new Hexagon();
+
 
     object john = new Manager("John", 34, 3003, 50000, "111-13-1113", 4);
     // Error!
@@ -90,8 +92,9 @@ static void CastingExamples()
 
     // (ClassIWantToCastTo)ReferenceIHave
     GivePromotion((Manager)john);
+    GivePromotion(jill);
 }
-static void GivePromotion(Employee emp)
+/*static void GivePromotion(Employee emp)
 {
     if (emp is not Manager and not SalesPerson)
     {
@@ -112,4 +115,29 @@ static void GivePromotion(Employee emp)
         Console.WriteLine("{0} had {1} stock options...", m.Name, m.StockOptions);
         Console.WriteLine();
     }
+    // this final statement will catch any Employee instance that is not Manager, SalesPerson, PtSalesPerson
+    else if (emp is var _)
+    {
+        Console.WriteLine("Unable to promote {0}. Wrong employee type", emp.Name);
+        Console.WriteLine();
+    }
+}*/
+
+// Pattern matching switch statement
+static void GivePromotion(Employee emp)
+{
+    Console.WriteLine("{0} was promoted!", emp.Name);
+    switch (emp)
+    {
+        case SalesPerson s when s.SalesNumber > 5:
+            Console.WriteLine("{0} made {1} sale(s)!", emp.Name, s.SalesNumber);
+            break;
+        case Manager m:
+            Console.WriteLine("{0} had {1} stock options...", emp.Name, m.StockOptions);
+            break;
+        case Employee _:
+            Console.WriteLine("Unable to promote {0}. Wrong employee type", emp.Name);
+            break;
+    }
+    Console.WriteLine();
 }
