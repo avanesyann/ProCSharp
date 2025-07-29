@@ -19,6 +19,8 @@
             {
                 Console.WriteLine("Same instance!");
             }
+
+            Console.WriteLine(p1.ToString());
         }
     }
 }
