@@ -24,5 +24,18 @@
         {
             return base.ToString() + $"[First Name: {FirstName}; Last Name: {LastName}; Age: {Age}]";
         }
+        public override bool Equals(object? obj)
+        {
+            if (!(obj is Person temp))
+                return false;
+
+            if (temp.FirstName == this.FirstName
+                && temp.LastName == this.LastName
+                && temp.Age == this.Age)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
