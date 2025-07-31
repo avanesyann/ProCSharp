@@ -21,6 +21,8 @@
             }
 
             Console.WriteLine(p1.ToString());
+
+            Console.WriteLine(p1.GetHashCode());
         }
     }
 }
