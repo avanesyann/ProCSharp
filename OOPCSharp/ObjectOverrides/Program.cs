@@ -23,6 +23,30 @@
             Console.WriteLine(p1.ToString());
 
             Console.WriteLine(p1.GetHashCode());
+            Console.WriteLine();
+
+            // Testing Modified Person Class
+            Console.WriteLine("*** Testing Modified Person Class ***");
+            Console.WriteLine();
+            Person person1 = new Person("Homer", "Simpson", 50, "111-11-1111");
+            Person person2 = new Person("Homer", "Simpson", 50, "111-11-1111");
+
+            Console.WriteLine("p1.ToString() = {0}", person1.ToString());
+            Console.WriteLine("p2.ToString() = {0}", person2.ToString());
+
+            Console.WriteLine("p1 = p2?: {0}", person1.Equals(person2));
+
+            Console.WriteLine("Same hash codes?: {0}", person1.GetHashCode() == person2.GetHashCode());
+            Console.WriteLine();
+
+            person2.Age = 45;
+            Console.WriteLine("p1.ToString() = {0}", person1.ToString());
+            Console.WriteLine("p2.ToString() = {0}", person2.ToString());
+
+            Console.WriteLine("p1 = p2?: {0}", person1.Equals(person2));
+
+            Console.WriteLine("Same hash codes?: {0}", person1.GetHashCode() == person2.GetHashCode());
+            Console.WriteLine();
         }
     }
 }
