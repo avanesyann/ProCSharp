@@ -47,6 +47,19 @@
 
             Console.WriteLine("Same hash codes?: {0}", person1.GetHashCode() == person2.GetHashCode());
             Console.WriteLine();
+
+            StaticMembersOfObject();
+        }
+
+        static void StaticMembersOfObject()
+        {
+            Person p3 = new Person("Sally", "Jones", 4);
+            Person p4 = new Person("Sally", "Jones", 4);
+
+            Console.WriteLine("p3 and p4 have same state: {0}", object.Equals(p3, p4));
+            Console.WriteLine("p3 and p4 are pointing to same object: {0}", object.ReferenceEquals(p3, p4));
+            // Here you are able to send in two objects (of any type)
+            // and allow the System.Object class to determine the details automatically.
         }
     }
 }
