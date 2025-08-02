@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeDrawing", "ShapeDrawin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectOverrides", "ObjectOverrides\ObjectOverrides.csproj", "{E588F1BD-E4A3-4BE9-8CAF-565D96659FFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRental", "VehicleRental\VehicleRental.csproj", "{898DAF76-BA93-4794-A970-0ABD3284A46D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{E588F1BD-E4A3-4BE9-8CAF-565D96659FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E588F1BD-E4A3-4BE9-8CAF-565D96659FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E588F1BD-E4A3-4BE9-8CAF-565D96659FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
