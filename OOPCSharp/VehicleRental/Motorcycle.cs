@@ -1,12 +1,12 @@
 ﻿namespace VehicleRental
 {
-    public class Bicycle : Vehicle
+    public class Motorcycle : Vehicle
     {
-        public bool IsElectric { get; set; }
+        public bool HasSidecar { get; set; }
 
-        public Bicycle(bool isElectric)
+        public Motorcycle(bool hasSidecar)
         {
-            IsElectric = isElectric;
+            HasSidecar = hasSidecar;
         }
 
         public override double CalculateRentalPrice(int hours)
@@ -17,7 +17,7 @@
         public override void DisplayInfo()
         {
             base.DisplayInfo();
-            Console.WriteLine($"Is {(IsElectric ? "Electric" : "Not Electric")}");
+            Console.WriteLine($"{(HasSidecar ? "Has" : "Doesn't have")} a sidecar.");
         }
     }
 }
