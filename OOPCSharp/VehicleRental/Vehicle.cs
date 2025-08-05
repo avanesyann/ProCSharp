@@ -10,5 +10,17 @@
         {
             Console.WriteLine($"Brand: {Brand} | Model: {Model}");
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (!(obj is Vehicle vehicle))
+                return false;
+
+            if (vehicle.Model == this.Model
+                && vehicle.Brand == this.Brand)
+                return true;
+
+            return false;
+        }
     }
 }
