@@ -4,21 +4,25 @@
     {
         static void Main(string[] args)
         {
-            Car porsche = new Car(4) { Brand = "Porsche", Model = "911" };
-            porsche.DisplayInfo();
-            Console.WriteLine();
+            List<Vehicle> vehicles = new List<Vehicle>();
 
-            Car porsche2 = new Car(4) { Brand = "Porsche", Model = "Taycan" };
+            vehicles.Add(new Car(4) { Brand = "Porsche", Model = "911" });
 
-            Motorcycle harley = new Motorcycle(false) { Brand = "Harley-Davidson", Model = "Sportster" };
-            harley.DisplayInfo();
-            Console.WriteLine();
+            vehicles.Add(new Car(4) { Brand = "Porsche", Model = "Taycan" });
 
-            Bicycle trek = new Bicycle(true) { Brand = "Trek", Model = "Marlin" };
-            trek.DisplayInfo();
-            Console.WriteLine();
+            vehicles.Add(new Motorcycle(false) { Brand = "Harley-Davidson", Model = "Sportster" });
 
-            Console.WriteLine($"Are the Porsches the same?: {(porsche.Equals(porsche2) ? "Yes!" : "Nope")}");
+            vehicles.Add(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
+
+            foreach (Vehicle vehicle in vehicles)
+            {
+                vehicle.DisplayInfo();
+                Console.WriteLine();
+
+                Console.WriteLine($"Are {vehicles[0].Model} and {vehicle.Model} the same?: {(vehicles[0].Equals(vehicle) ? "Yes!" : "Nope")}");
+
+                Console.WriteLine();
+            }
         }
     }
 }
