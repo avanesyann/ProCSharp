@@ -16,11 +16,18 @@
 
             foreach (Vehicle vehicle in vehicles)
             {
-                vehicle.DisplayInfo();
-                Console.WriteLine();
+                Car car = vehicle as Car;
+                if (car == null)
+                {
+                    Console.WriteLine("That's not a car.");
+                }
+                else
+                {
+                    car.DisplayInfo();
+                    Console.WriteLine($"Are {vehicles[0].Model} and {vehicle.Model} the same?: {(vehicles[0].Equals(vehicle) ? "Yes!" : "Nope")}");
+                }
 
-                Console.WriteLine($"Are {vehicles[0].Model} and {vehicle.Model} the same?: {(vehicles[0].Equals(vehicle) ? "Yes!" : "Nope")}");
-
+                
                 Console.WriteLine();
             }
         }
