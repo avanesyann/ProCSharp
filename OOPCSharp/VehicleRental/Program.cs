@@ -14,6 +14,8 @@
 
             vehicles.Add(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
 
+            vehicles.Add(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
+
             foreach (Vehicle vehicle in vehicles)
             {
                 Car car = vehicle as Car;
