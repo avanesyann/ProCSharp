@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectOverrides", "ObjectOv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRental", "VehicleRental\VehicleRental.csproj", "{898DAF76-BA93-4794-A970-0ABD3284A46D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicalZoo", "MagicalZoo\MagicalZoo.csproj", "{16598A3F-977D-4EC6-83D7-A40CE2020AFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{898DAF76-BA93-4794-A970-0ABD3284A46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
