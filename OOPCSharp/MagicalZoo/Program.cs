@@ -4,12 +4,28 @@
     {
         static void Main(string[] args)
         {
-            MagicalCreature creature = new Dragon();
-            creature.MakeSound();
+            List<MagicalCreature> magicalCreatures = new List<MagicalCreature>();
+            magicalCreatures.Add(new Dragon());
+            magicalCreatures.Add(new Phoenix());
+            magicalCreatures.Add(new Unicorn());
 
-            if (creature is Dragon)
+            foreach (MagicalCreature magicalCreature in magicalCreatures)
             {
-                ((Dragon)creature).BreatheFire();
+                magicalCreature.MakeSound();
+
+                if (magicalCreature is Dragon dragon)
+                {
+                    dragon.BreatheFire();
+                }
+                else if (magicalCreature is Phoenix phoenix)
+                {
+                    phoenix.Revive();
+                }
+                else if (magicalCreature is Unicorn)
+                {
+                    ((Unicorn)magicalCreature).Heal();
+                }
+                Console.WriteLine();
             }
         }
     }
