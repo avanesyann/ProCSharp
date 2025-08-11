@@ -30,7 +30,7 @@
         }
         public void Revive()
         {
-            Console.WriteLine("I feel like I was just born again!");
+            Console.WriteLine("Reviving...");
         }
     }
 
@@ -45,7 +45,7 @@
 
         public void Heal()
         {
-            Console.WriteLine("Damn, that was good.");
+            Console.WriteLine("Healing...");
         }
     }
 }
