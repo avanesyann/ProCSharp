@@ -12,8 +12,9 @@
             rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
 
             // todo: find all the vehicles by that model instead of just one.
-            Vehicle porsche = rental.FindByModel("911");
-            porsche.DisplayInfo();
+            rental.FindByModel("911").RentVehicle(24);
+            rental.FindByModel("911").RentVehicle(24);
+            rental.FindByModel("Sportster").RentVehicle(24);
         }
     }
 }

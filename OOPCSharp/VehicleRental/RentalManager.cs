@@ -6,11 +6,6 @@ namespace VehicleRental
     {
         private List<Vehicle> _vehicles = new List<Vehicle>();
 
-        
-        public void RentVehicle(Vehicle v, int hours)
-        {
-            Console.WriteLine($"You've rented the {v.Brand} {v.Model} for {hours} hour(s).");
-        }
         public void AddVehicle(Vehicle v)
         {
             _vehicles.Add(v);
