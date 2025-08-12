@@ -4,34 +4,16 @@
     {
         static void Main(string[] args)
         {
-            List<Vehicle> vehicles = new List<Vehicle>();
+            RentalManager rental = new RentalManager();
+            rental.AddVehicle(new Car(4) { Brand = "Porsche", Model = "911" });
+            rental.AddVehicle(new Car(4) { Brand = "Porsche", Model = "Taycan" });
+            rental.AddVehicle(new Motorcycle(false) { Brand = "Harley-Davidson", Model = "Sportster" });
+            rental.AddVehicle(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
+            rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
 
-            vehicles.Add(new Car(4) { Brand = "Porsche", Model = "911" });
-
-            vehicles.Add(new Car(4) { Brand = "Porsche", Model = "Taycan" });
-
-            vehicles.Add(new Motorcycle(false) { Brand = "Harley-Davidson", Model = "Sportster" });
-
-            vehicles.Add(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
-
-            vehicles.Add(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
-
-            foreach (Vehicle vehicle in vehicles)
-            {
-                Car car = vehicle as Car;
-                if (car == null)
-                {
-                    Console.WriteLine("That's not a car.");
-                }
-                else
-                {
-                    car.DisplayInfo();
-                    Console.WriteLine($"Are {vehicles[0].Model} and {vehicle.Model} the same?: {(vehicles[0].Equals(vehicle) ? "Yes!" : "Nope")}");
-                }
-
-                
-                Console.WriteLine();
-            }
+            // todo: find all the vehicles by that model instead of just one.
+            Vehicle porsche = rental.FindByModel("911");
+            porsche.DisplayInfo();
         }
     }
 }
