@@ -11,18 +11,6 @@
         {
             Console.WriteLine($"Brand: {Brand} | Model: {Model}");
         }
-        public void RentVehicle(int hours)
-        {
-            if (IsAvailable)
-            {
-                IsAvailable = false;
-                Console.WriteLine($"You've rented the {Brand} {Model} for {hours} hour(s).");
-            }
-            else
-            {
-                Console.WriteLine("The vehicle is not available.");
-            }
-        }
 
         public override bool Equals(object? obj)
         {

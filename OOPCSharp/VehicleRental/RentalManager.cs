@@ -14,6 +14,39 @@ namespace VehicleRental
         public Vehicle? FindByModel(string model)
             => _vehicles.FirstOrDefault(v => v.Model.Equals(model, StringComparison.OrdinalIgnoreCase));
 
+        public void RentVehicle(string model, int hours)
+        {
+            var vehicle = FindByModel(model);
+
+            if (vehicle == null)
+            {
+                Console.WriteLine("Vehicle not found.");
+                return;
+            }
+
+            if (!vehicle.IsAvailable)
+            {
+                Console.WriteLine("The vehicle is not available.");
+                return;
+            }
+
+            switch (vehicle)
+            {
+                case Car car:
+                    Console.WriteLine("Processing special paperwork for car rental...");
+                    break;
+                case Motorcycle m:
+                    Console.WriteLine("Ensure helmet is provided...");
+                    break;
+                case Bicycle b:
+                    Console.WriteLine("Drive safe!");
+                    break;
+            }
+
+            vehicle.IsAvailable = false;
+            Console.WriteLine($"You've rented the {vehicle.Brand} {vehicle.Model} for {hours} hour(s).");
+            Console.WriteLine();
+        }
         // to be implemented
         public void CompareVehicles()
         {
