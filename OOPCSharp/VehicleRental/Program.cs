@@ -16,6 +16,8 @@
             rental.RentVehicle("Sportster", 4);
             rental.RentVehicle("911", 1);
             rental.RentVehicle("Marlin", 4);
+
+            rental.CompareVehicles(rental.FindByModel("911 Carrera S"), rental.FindByModel("911"));
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using System.Net.Http.Headers;
+using System.Numerics;
+using System.Reflection;
 
 namespace VehicleRental
 {
@@ -48,24 +50,32 @@ namespace VehicleRental
             Console.WriteLine();
         }
         // to be implemented
-        public void CompareVehicles()
+        public void CompareVehicles(Vehicle v1, Vehicle v2)
         {
-            foreach (Vehicle vehicle in _vehicles)
+            if (v1 == null || v2 == null)
             {
-                Car car = vehicle as Car;
-                if (car == null)
-                {
-                    Console.WriteLine("That's not a car.");
-                }
-                else
-                {
-                    car.DisplayInfo();
-                    Console.WriteLine($"Are {_vehicles[0].Model} and {vehicle.Model} the same?: {(_vehicles[0].Equals(vehicle) ? "Yes!" : "Nope")}");
-                }
-
-
-                Console.WriteLine();
+                Console.WriteLine("One or both vehicles are null.");
+                return;
             }
+
+            Console.WriteLine($"Comparing {v1.Brand} {v1.Model} and {v2.Brand} {v2.Model}:");
+
+            if (v1 is Car car1 && v2 is Car car2)
+            {
+                if (car1.SeatCount > car2.SeatCount)
+                    Console.WriteLine($"{car1.Brand} {car1.Model} has more seats.");
+                else if (car1.SeatCount < car2.SeatCount)
+                    Console.WriteLine($"{car2.Brand} {car2.Model} has more seats.");
+                else
+                    Console.WriteLine("Both cars have the same amount of seats.");
+            }
+
+            if (v1 is Motorcycle m1 && v2 is Motorcycle m2)
+            {
+                Console.WriteLine("Both are motorcycles!");
+            }
+
+            Console.WriteLine();
         }
     }
 }
