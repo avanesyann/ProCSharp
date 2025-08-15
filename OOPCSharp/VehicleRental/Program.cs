@@ -10,6 +10,7 @@
             rental.AddVehicle(new Motorcycle(false) { Brand = "Harley-Davidson", Model = "Sportster" });
             rental.AddVehicle(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
             rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
+            rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Turbo S" });
 
             // todo: find all the vehicles by that model instead of just one.
             rental.RentVehicle("911", 24);
@@ -18,6 +19,7 @@
             rental.RentVehicle("Marlin", 4);
 
             rental.CompareVehicles(rental.FindByModel("911 Carrera S"), rental.FindByModel("911"));
+            rental.CompareVehicles(rental.FindByModel("911 Turbo S"), rental.FindByModel("911"));
         }
     }
 }
