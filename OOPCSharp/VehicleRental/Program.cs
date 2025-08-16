@@ -11,6 +11,7 @@
             rental.AddVehicle(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
             rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
             rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Turbo S" });
+            rental.AddVehicle(new Van(true) { Brand = "Chevrolet", Model = "Vandura" });
 
             // todo: find all the vehicles by that model instead of just one.
             rental.RentVehicle("911", 24);
