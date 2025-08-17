@@ -21,6 +21,10 @@
 
             rental.CompareVehicles(rental.FindByModel("911 Carrera S"), rental.FindByModel("911"));
             rental.CompareVehicles(rental.FindByModel("911 Turbo S"), rental.FindByModel("911"));
+
+            rental.FindByModel("911").DisplayInfo();
+            rental.FindByModel("911 Turbo S").DisplayInfo();
+            rental.FindByModel("911 Carrera S").DisplayInfo();
         }
     }
 }
