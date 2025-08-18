@@ -25,6 +25,10 @@
             rental.FindByModel("911").DisplayInfo();
             rental.FindByModel("911 Turbo S").DisplayInfo();
             rental.FindByModel("911 Carrera S").DisplayInfo();
+            Console.WriteLine();
+
+            rental.ReturnVehicle("911 Turbo S");
+            rental.ReturnVehicle("Marlin");
         }
     }
 }

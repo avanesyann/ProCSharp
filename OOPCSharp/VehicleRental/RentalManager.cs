@@ -49,6 +49,28 @@ namespace VehicleRental
             Console.WriteLine($"You've rented the {vehicle.Brand} {vehicle.Model} for {hours} hour(s).");
             Console.WriteLine();
         }
+
+        // implement late return fee
+        public void ReturnVehicle(string model)
+        {
+            var vehicle = FindByModel(model);
+
+            if (vehicle == null)
+            {
+                Console.WriteLine("Vehicle not found.");
+                return;
+            }
+
+            if (vehicle.IsAvailable)
+            {
+                Console.WriteLine("The vehicle is not rented.");
+                return;
+            }
+
+            vehicle.IsAvailable = true;
+            Console.WriteLine($"You've returned the {vehicle.Brand} {vehicle.Model}.");
+            Console.WriteLine();
+        }
         // to be implemented
         public void CompareVehicles(Vehicle v1, Vehicle v2)
         {
