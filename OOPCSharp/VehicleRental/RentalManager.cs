@@ -46,6 +46,7 @@ namespace VehicleRental
             }
 
             vehicle.IsAvailable = false;
+            vehicle.DueTime = DateTime.Now.AddHours(hours);
             Console.WriteLine($"You've rented the {vehicle.Brand} {vehicle.Model} for {hours} hour(s).");
             Console.WriteLine();
         }
@@ -68,8 +69,23 @@ namespace VehicleRental
             }
 
             vehicle.IsAvailable = true;
-            Console.WriteLine($"You've returned the {vehicle.Brand} {vehicle.Model}.");
+            DateTime now = DateTime.Now;
+
+            if (vehicle.DueTime != null)
+            {
+                if (now <= vehicle.DueTime)
+                {
+                    Console.WriteLine($"The {vehicle.Brand} {vehicle.Model} has been returned on time.");
+                }
+                else
+                {
+                    // implement late fee system
+                    Console.WriteLine($"The {vehicle.Brand} {vehicle.Model} was retuned late. ");
+                }
+            }
             Console.WriteLine();
+
+            vehicle.DueTime = null;
         }
         // to be implemented
         public void CompareVehicles(Vehicle v1, Vehicle v2)

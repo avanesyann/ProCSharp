@@ -6,6 +6,8 @@
         public string Model { get; init; }
         public bool IsAvailable { get; set; } = true;
 
+        public DateTime? DueTime { get; set; }
+
         public abstract double CalculateRentalPrice(int hours);
         public virtual void DisplayInfo()
         {
