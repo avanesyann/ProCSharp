@@ -3,6 +3,7 @@
     public class Motorcycle : Vehicle
     {
         public bool HasSidecar { get; set; }
+        public double PriceAnHour { get; set; } = 170;
 
         public Motorcycle(bool hasSidecar)
         {
@@ -11,7 +12,7 @@
 
         public override double CalculateRentalPrice(int hours)
         {
-            throw new NotImplementedException();
+            return PriceAnHour * hours;
         }
 
         public override void DisplayInfo()

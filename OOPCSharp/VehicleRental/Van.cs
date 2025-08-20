@@ -3,6 +3,7 @@
     public class Van : Vehicle
     {
         public bool DoorSlides { get; set; }
+        public double PriceAnHour { get; set; } = 150;
 
         public Van(bool doorSlides)
         {
@@ -11,7 +12,7 @@
 
         public override double CalculateRentalPrice(int hours)
         {
-            throw new NotImplementedException();
+            return hours * PriceAnHour;
         }
 
         public override void DisplayInfo()

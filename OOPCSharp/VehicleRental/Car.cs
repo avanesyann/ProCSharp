@@ -3,6 +3,7 @@
     public class Car : Vehicle
     {
         public int SeatCount { get; init; }
+        public double PriceAnHour { get; set; } = 100;
 
         public Car(int seatCount)
         {
@@ -10,7 +11,7 @@
         }
         public override double CalculateRentalPrice(int hours)
         {
-            throw new NotImplementedException();
+            return hours * PriceAnHour;
         }
         public override void DisplayInfo()
         {

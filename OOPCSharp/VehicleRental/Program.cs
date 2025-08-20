@@ -14,7 +14,6 @@
             rental.AddVehicle(new Van(true) { Brand = "Chevrolet", Model = "Vandura" });
 
             // todo: find all the vehicles by that model instead of just one.
-            // rental.RentVehicle("911", 24);
             rental.RentVehicle("Sportster", 4);
             rental.RentVehicle("911", 1);
             rental.RentVehicle("Marlin", 4);
