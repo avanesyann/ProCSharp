@@ -29,6 +29,9 @@
             rental.ReturnVehicle("911 Turbo S");
             rental.ReturnVehicle("Marlin");
             rental.ReturnVehicle("911");
+
+            Console.WriteLine(rental.FindByModel("911").CalculateRentalPrice(4));
+            Console.WriteLine(rental.FindByModel("Marlin").CalculateRentalPrice(4));
         }
     }
 }
