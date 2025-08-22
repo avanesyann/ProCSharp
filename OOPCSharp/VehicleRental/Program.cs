@@ -34,6 +34,8 @@
             Console.WriteLine(rental.FindByModel("Marlin").CalculateRentalPrice(4));
 
             Console.WriteLine(rental.FindByModel("911").Id);
+            Console.WriteLine(rental.FindByModel("911 Turbo S").Id);
+            Console.WriteLine(rental.FindByModel("Marlin").Id);
         }
     }
 }
