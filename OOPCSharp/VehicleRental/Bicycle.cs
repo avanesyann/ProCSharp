@@ -5,11 +5,6 @@
         public bool IsElectric { get; set; }
         public double PriceAnHour { get; set; } = 20;
 
-        public Bicycle(bool isElectric)
-        {
-            IsElectric = isElectric;
-        }
-
         public override double CalculateRentalPrice(int hours)
         {
             return PriceAnHour * hours;

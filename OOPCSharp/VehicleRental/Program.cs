@@ -7,11 +7,11 @@
             RentalManager rental = new RentalManager();
             rental.AddVehicle(new Car(4) { Brand = "Porsche", Model = "911" });
             rental.AddVehicle(new Car(4) { Brand = "Porsche", Model = "Taycan" });
-            rental.AddVehicle(new Motorcycle(false) { Brand = "Harley-Davidson", Model = "Sportster" });
-            rental.AddVehicle(new Bicycle(true) { Brand = "Trek", Model = "Marlin" });
+            rental.AddVehicle(new Motorcycle() { Brand = "Harley-Davidson", Model = "Sportster" });
+            rental.AddVehicle(new Bicycle() { Brand = "Trek", Model = "Marlin" });
             rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Carrera S" });
             rental.AddVehicle(new Car(2) { Brand = "Porsche", Model = "911 Turbo S" });
-            rental.AddVehicle(new Van(true) { Brand = "Chevrolet", Model = "Vandura" });
+            rental.AddVehicle(new Van() { Brand = "Chevrolet", Model = "Vandura" });
 
             // todo: find all the vehicles by that model instead of just one.
             rental.RentVehicle("Sportster", 4);
@@ -32,6 +32,8 @@
 
             Console.WriteLine(rental.FindByModel("911").CalculateRentalPrice(4));
             Console.WriteLine(rental.FindByModel("Marlin").CalculateRentalPrice(4));
+
+            Console.WriteLine(rental.FindByModel("911").Id);
         }
     }
 }

@@ -5,11 +5,6 @@
         public bool HasSidecar { get; set; }
         public double PriceAnHour { get; set; } = 170;
 
-        public Motorcycle(bool hasSidecar)
-        {
-            HasSidecar = hasSidecar;
-        }
-
         public override double CalculateRentalPrice(int hours)
         {
             return PriceAnHour * hours;

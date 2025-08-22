@@ -2,11 +2,17 @@
 {
     public abstract class Vehicle
     {
+        public Guid Id { get; private set; }
         public string Brand { get; init; }
         public string Model { get; init; }
         public bool IsAvailable { get; set; } = true;
 
         public DateTime? DueTime { get; set; }
+
+        public Vehicle()
+        {
+            Id = Guid.NewGuid();
+        }
 
         public abstract double CalculateRentalPrice(int hours);
         public virtual void DisplayInfo()

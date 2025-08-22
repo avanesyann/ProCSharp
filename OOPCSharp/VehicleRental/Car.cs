@@ -5,10 +5,11 @@
         public int SeatCount { get; init; }
         public double PriceAnHour { get; set; } = 100;
 
-        public Car(int seatCount)
+        public Car(int seats)
         {
-            SeatCount = seatCount;
+            SeatCount = seats;
         }
+
         public override double CalculateRentalPrice(int hours)
         {
             return hours * PriceAnHour;

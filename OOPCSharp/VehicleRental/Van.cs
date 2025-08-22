@@ -5,11 +5,6 @@
         public bool DoorSlides { get; set; }
         public double PriceAnHour { get; set; } = 150;
 
-        public Van(bool doorSlides)
-        {
-            DoorSlides = doorSlides;
-        }
-
         public override double CalculateRentalPrice(int hours)
         {
             return hours * PriceAnHour;
