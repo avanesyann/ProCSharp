@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRental", "VehicleRen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicalZoo", "MagicalZoo\MagicalZoo.csproj", "{16598A3F-977D-4EC6-83D7-A40CE2020AFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleException", "SimpleException\SimpleException.csproj", "{3C8B262B-D3AA-48ED-A346-4A107C105810}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16598A3F-977D-4EC6-83D7-A40CE2020AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8B262B-D3AA-48ED-A346-4A107C105810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8B262B-D3AA-48ED-A346-4A107C105810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8B262B-D3AA-48ED-A346-4A107C105810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8B262B-D3AA-48ED-A346-4A107C105810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
