@@ -35,14 +35,12 @@
                 CurrentSpeed += delta;
                 if (CurrentSpeed > MaxSpeed)
                 {
-                    Console.WriteLine("{0} has overheated!", PetName);
                     CurrentSpeed = 0;
                     _carIsDead = true;
+
+                    throw new Exception($"{PetName} has overheated!");
                 }
-                else
-                {
-                    Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
-                }
+                Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
             }
         }
     }
