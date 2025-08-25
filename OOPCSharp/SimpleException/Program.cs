@@ -23,6 +23,7 @@ catch(Exception e)
     Console.WriteLine("Source: {0}", e.Source);
 
     Console.WriteLine("Stack: {0}", e.StackTrace);
+    Console.WriteLine("Help link: {0}", e.HelpLink);
 }
 
 // The error has been handled, processing continues with the next statement.

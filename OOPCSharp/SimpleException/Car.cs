@@ -38,7 +38,10 @@
                     CurrentSpeed = 0;
                     _carIsDead = true;
 
-                    throw new Exception($"{PetName} has overheated!");
+                    throw new Exception($"{PetName} has overheated!")
+                    {
+                        HelpLink = "https://www.CarsRUs.com"
+                    };
                 }
                 Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
             }
