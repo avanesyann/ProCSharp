@@ -1,4 +1,5 @@
 ﻿using SimpleException;
+using System.Collections;
 
 Console.WriteLine("***** Simple Exception Example *****");
 Console.WriteLine("=> Creating a car and stepping on it!");
@@ -24,6 +25,12 @@ catch(Exception e)
 
     Console.WriteLine("Stack: {0}", e.StackTrace);
     Console.WriteLine("Help link: {0}", e.HelpLink);
+
+    Console.WriteLine("\n-> Custom Data:");
+    foreach (DictionaryEntry de in e.Data)
+    {
+        Console.WriteLine("-> {0}: {1}", de.Key, de.Value);
+    }
 }
 
 // The error has been handled, processing continues with the next statement.
