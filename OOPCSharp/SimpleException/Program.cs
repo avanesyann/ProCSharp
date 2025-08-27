@@ -35,3 +35,6 @@ catch(Exception e)
 
 // The error has been handled, processing continues with the next statement.
 Console.WriteLine("\n***** Out of exception logic *****");
+
+NullReferenceException nullRefEx = new NullReferenceException();
+Console.WriteLine("NullReferenceException is-a SystemException? : {0}", nullRefEx is SystemException);
