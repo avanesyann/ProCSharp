@@ -14,6 +14,13 @@
             ErrorTimeStamp = time;
         }
 
+        // you are not required to override the virtual Message property
+        //public CarIsDeadException(string message, string cause, DateTime time) : base(message)
+        //{
+        //    CauseOfError = cause;
+        //    ErrorTimeStamp = time;
+        //}
+
         public override string Message => $"Car Error Message: {_messageDetails}";
     }
 }
