@@ -2,7 +2,6 @@
 {
     public class CarIsDeadException : ApplicationException
     {
-        private string _messageDetails = string.Empty;
         public DateTime ErrorTimeStamp { get; set; }
         public string CauseOfError { get; set; }
 

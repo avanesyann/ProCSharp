@@ -41,12 +41,6 @@
                     throw new CarIsDeadException("You have a lead foot.", DateTime.Now, $"{PetName} has overheated!")
                     {
                         HelpLink = "https://www.CarsRUs.com",
-
-                        //Data =
-                        //{
-                        //    {"TimeStamp", $"The car exploded at {DateTime.Now}"},
-                        //    {"Cause", "You have a lead foot."}
-                        //}
                     };
                 }
                 Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
