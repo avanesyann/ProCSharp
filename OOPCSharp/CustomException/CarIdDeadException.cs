@@ -26,7 +26,5 @@
             CauseOfError = cause;
             ErrorTimeStamp = time;
         }
-
-        //public override string Message => $"Car Error Message: {_messageDetails}";
     }
 }
