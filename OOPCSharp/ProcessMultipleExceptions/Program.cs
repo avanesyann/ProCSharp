@@ -11,6 +11,18 @@ try
 catch (CarIsDeadException e)
 {
     Console.WriteLine(e.Message);
+
+    try
+    {
+        FileStream fs = File.Open(@"C:\carErrors.txt", FileMode.Open);
+    }
+    catch (Exception e2)
+    {
+        // This causes a compile error-InnerException is read only
+        // Throw an exception that records the new exception
+        // as well as the message of the first exception.
+        throw new CarIsDeadException(e.CauseOfError, e.ErrorTimeStamp, e.Message, e2);
+    }
 }
 catch (ArgumentOutOfRangeException e)
 {
@@ -23,3 +35,15 @@ catch (Exception e)
 {
     Console.WriteLine(e.Message);
 }
+
+
+// General catch
+// (this is not the most informative way to handle exceptions)
+//try
+//{
+//    myCar.Accelerate(90);
+//}
+//catch
+//{
+//    Console.WriteLine("Something bad happened...");
+//}
