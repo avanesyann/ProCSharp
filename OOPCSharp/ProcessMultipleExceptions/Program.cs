@@ -35,6 +35,11 @@ catch (Exception e)
 {
     Console.WriteLine(e.Message);
 }
+finally
+{
+    // This will always occur. Exception or not.
+    myCar.CrankTunes(false);
+}
 
 
 // General catch
