@@ -1,5 +1,10 @@
-﻿Console.WriteLine("***** A First Look at Interfaces *****\n");
+﻿using CustomInterfaces;
+
+Console.WriteLine("***** A First Look at Interfaces *****\n");
 CloneableExample();
+
+// Illegal to allocate interface types.
+// IPointy p = new IPointy();
 
 static void CloneableExample()
 {
