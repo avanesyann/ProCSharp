@@ -23,6 +23,18 @@ catch (InvalidCastException e)
     Console.WriteLine(e.Message);
 }
 
+Hexagon hex2 = new Hexagon("Peter");
+IPointy itfPt2 = hex2 as IPointy;
+
+if (itfPt2 != null)
+{
+    Console.WriteLine("Points: {0}", itfPt.Points);
+}
+else
+{
+    Console.WriteLine("OOPS! Not pointy...");
+}
+
 
 static void CloneableExample()
 {
