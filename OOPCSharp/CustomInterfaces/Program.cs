@@ -6,6 +6,24 @@ CloneableExample();
 // Illegal to allocate interface types.
 // IPointy p = new IPointy();
 
+Hexagon hex = new Hexagon();
+Console.WriteLine("Points: {0}", hex.Points);
+
+// Catch a possible InvalidCastException
+Circle c = new Circle("Lisa");
+IPointy itfPt = null;
+
+try
+{
+    itfPt = (IPointy)c;
+    Console.WriteLine(itfPt.Points);
+}
+catch (InvalidCastException e)
+{
+    Console.WriteLine(e.Message);
+}
+
+
 static void CloneableExample()
 {
     // All of these classes support the ICloneable interface.
