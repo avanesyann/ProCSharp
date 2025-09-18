@@ -35,6 +35,16 @@ else
     Console.WriteLine("OOPS! Not pointy...");
 }
 
+Hexagon hex3 = new Hexagon("Sona");
+if (hex3 is IPointy itfPt3)
+{
+    Console.WriteLine("Points: {0}", itfPt3.Points);
+}
+else
+{
+    Console.WriteLine("OOPS! Not pointy...");
+}
+
 
 static void CloneableExample()
 {
