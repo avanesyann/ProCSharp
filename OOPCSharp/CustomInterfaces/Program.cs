@@ -46,6 +46,17 @@ else
 }
 
 
+
+var sq = new Square("Boxy") { NumberOfSides = 4, SideLength = 4 };
+sq.Draw();
+// the Square instance must be explicitly cast to the IRegularPointy inetrface
+
+Console.WriteLine($"{sq.PetName} has {sq.NumberOfSides} of length {sq.SideLength} and a perimeter of {((IRegularPointy)sq).Perimeter}");
+
+// one option to get around this problem is to always code to the inetrface of a type
+IRegularPointy sq2 = new Square("Roxy") { NumberOfSides = 4, SideLength = 4 };
+
+
 static void CloneableExample()
 {
     // All of these classes support the ICloneable interface.
