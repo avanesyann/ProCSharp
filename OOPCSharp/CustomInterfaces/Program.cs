@@ -56,6 +56,10 @@ Console.WriteLine($"{sq.PetName} has {sq.NumberOfSides} of length {sq.SideLength
 // one option to get around this problem is to always code to the inetrface of a type
 IRegularPointy sq2 = new Square("Roxy") { NumberOfSides = 4, SideLength = 4 };
 
+Console.WriteLine($"Example property: {IRegularPointy.ExampleProperty}");
+IRegularPointy.ExampleProperty = "Updated";
+Console.WriteLine($"Example property: {IRegularPointy.ExampleProperty}");
+
 
 static void CloneableExample()
 {
