@@ -60,6 +60,12 @@ Console.WriteLine($"Example property: {IRegularPointy.ExampleProperty}");
 IRegularPointy.ExampleProperty = "Updated";
 Console.WriteLine($"Example property: {IRegularPointy.ExampleProperty}");
 
+IPointy[] pointyObjects = { new Hexagon(), new Knife(), new Triangle(), new Fork(), new PitchFork() };
+
+foreach (IPointy i in pointyObjects)
+{
+    Console.WriteLine("Object has {0} points.", i.Points);
+}
 
 static void CloneableExample()
 {
