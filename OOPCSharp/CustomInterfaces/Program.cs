@@ -78,3 +78,14 @@ static void CloneableExample()
         Console.WriteLine("Your clone is a: {0}", theClone.GetType().Name);
     }
 }
+static IPointy FindFirstPointyShape(Shape[] shapes)
+{
+    foreach (var shape in shapes)
+    {
+        if (shape is IPointy ip)
+        {
+            return ip;
+        }
+    }
+    return null;
+}
