@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessMultipleExceptions",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInterfaces", "CustomInterfaces\CustomInterfaces.csproj", "{BEA9CFAE-688D-438D-A444-88BF5C400B01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceNameClash", "InterfaceNameClash\InterfaceNameClash.csproj", "{6C7278B0-2633-4E7F-AA93-98351871150D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{BEA9CFAE-688D-438D-A444-88BF5C400B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEA9CFAE-688D-438D-A444-88BF5C400B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEA9CFAE-688D-438D-A444-88BF5C400B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7278B0-2633-4E7F-AA93-98351871150D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7278B0-2633-4E7F-AA93-98351871150D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7278B0-2633-4E7F-AA93-98351871150D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7278B0-2633-4E7F-AA93-98351871150D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
