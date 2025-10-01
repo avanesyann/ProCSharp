@@ -14,3 +14,7 @@ if (oct is IDrawToMemory dtm)
 {
     dtm.Draw();
 }
+else
+{
+    Console.WriteLine("Not an IDrawToMemory.");
+}
