@@ -12,5 +12,13 @@
             // on the object using our reference variable.
             Console.WriteLine(refToMyCar.ToString());
         }
+
+        static void MakeACar()
+        {
+            // when you assign object references to null, the compiler creates
+            // CIL code that ensures the reference no longer points to any object
+            Car myCar = new Car();
+            myCar = null;
+        }
     }
 }
